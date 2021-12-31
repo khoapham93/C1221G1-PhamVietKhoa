@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basic Form</title>
+
+    <style>
+
+        .col-25 {
+            float: left;
+            width: 150px;
+            margin-top: 6px;
+        }
+
+        .col-75 {
+            float: left;
+            width: 500px;
+            margin-top: 6px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        h1 {
+            color: blue;
+            background: aquamarine;
+            text-align: center;
+            padding: 10px 10px 10px 10px;
+        }
+
+
+        .label1 {
+            color: blue;
+        }
+
+        .lable2 {
+
+        }
+
+        .container {
+            border-radius: 5px;
+            background-color: darkkhaki;
+            padding: 10px 10px 10px 10px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 700px;
+            height: 400px;
+            /*justify-content: center;*/
+        }
+
+        input[type=text], input[type=date],select, textarea {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 2px;
+            resize: vertical;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <form name="Resg" action="" method="post">
+        <h1> ĐĂNG KÝ HỌC VIÊN</h1>
+        <div class="row">
+            <div class="col-25">
+                <LABEL class="label1"> Họ và tên</LABEL>
+            </div>
+            <div class="col-75">
+                <input class="nhap" type="text" name="Uname">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <LABEL class="label1"> Ngày sinh</LABEL>
+            </div>
+            <div class="col-75">
+                <input class="nhap" type="date" name="dayofbirth">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-25">
+                <label class="label1">Giới tính</label>
+            </div>
+            <div class="col-75">
+                <label class="lable2"><input type="radio" name="gender"> Nam</label>
+                <label class="lable2"><input type="radio" name="gender"> Nữ</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-25">
+                <label class="label1">Địa chỉ</label>
+            </div>
+            <div class="col-75">
+                <textarea cols="40" rows="3"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <LABEL class="label1"> Lớp</LABEL>
+            </div>
+            <div class="col-75">
+                <select name="class">
+                    <option value="7"> 7</option>
+                    <option value="8"> 8</option>
+                    <option value="9"> 9</option>
+                    <option value="10"> 10</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <LABEL class="label1"> Email</LABEL>
+            </div>
+            <div class="col-75">
+                <input class="nhap" type="text" name="email">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <LABEL class="label1"> Điện thoại</LABEL>
+            </div>
+            <div class="col-75">
+                <input class="nhap" type="text" name="phone">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-25"></div>
+            <div class="col-75" style="margin-left: auto; margin-right: auto">
+                    <input type="submit" value="Đăng ký">
+                    <input type="reset" value="Nhập lại">
+            </div>
+        </div>
+
+    </form>
+</div>
+
+
+</body>
+</html>

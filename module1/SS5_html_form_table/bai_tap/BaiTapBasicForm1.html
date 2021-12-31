@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basic Form</title>
+
+    <style>
+
+        .col-25 {
+            float: left;
+            width: 150px;
+            margin-top: 6px;
+        }
+
+        .col-75 {
+            float: left;
+            width: 500px;
+            margin-top: 6px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        h1 {
+            color: white;
+            background: coral;
+            text-align: center;
+            padding: 10px 10px 10px 10px;
+        }
+
+
+        .label1 {
+            color: blue;
+        }
+
+        .lable2 {
+            color: coral;
+        }
+
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 10px 10px 10px 10px;
+
+            width: 700px;
+            height: 300px;
+            /*justify-content: center;*/
+        }
+
+
+    </style>
+</head>
+<body>
+<div style="width: 720px;height: 320px;margin-left: auto;margin-right: auto; padding: 10px 10px 10px 10px; background-color:aqua;border-radius: 5px;" >
+<div class="container">
+    <form name="hobbies" action="BaiTapBasicForm1.html" method="post">
+        <h1> SỞ THÍCH CỦA BẠN</h1>
+        <div class="row">
+            <div class="col-25">
+                <LABEL class="label1"> Họ và tên</LABEL>
+            </div>
+            <div class="col-75">
+                <input class="nhap" type="text" name="Uname">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <LABEL class="label1"> Email</LABEL>
+            </div>
+            <div class="col-75">
+                <input class="nhap" type="text" name="email">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-25">
+                <label class="label1">Sở thích</label>
+            </div>
+            <div class="col-75">
+                <div class="row">
+                    <div class="col-25">
+                        <label class="lable2"><input type="checkbox" name="Hobies"> Thể thao</label>
+                    </div>
+                    <div class="col-25">
+                        <label class="lable2"><input type="checkbox" name="Hobies"> Âm nhạc</label>
+                    </div>
+                    <div class="col-25">
+                        <label class="lable2"><input type="checkbox" name="Hobies"> Đọc sách</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label class="lable2"><input type="checkbox" name="Hobies"> Lướt web</label>
+                    </div>
+                    <div class="col-25">
+                        <label class="lable2"><input type="checkbox" name="Hobies"> chơi game</label>
+                    </div>
+                    <div class="col-25">
+                        <label class="lable2"><input type="checkbox" name="Hobies"> Điện ảnh</label>
+                    </div>
+                </div>
+                <div class="col-25">
+                    <label class="lable2"><input type="checkbox" name="Hobies"> Du lịch</label>
+                </div>
+                <br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25"></div>
+            <div class="col-75">
+                <input type="submit" value="Gửi thông tin">
+                <input type="reset" value="Nhập lại">
+            </div>
+        </div>
+
+    </form>
+</div>
+</div>
+
+</body>
+</html>
