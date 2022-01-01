@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Dang Ky</title>
+    <style>
+        .container {
+            border-radius: 15px;
+            background-color: darkkhaki;
+            padding: 20px 10px 10px 10px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+            width: 300px;
+            height: 300px;
+
+        }
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+        input[type=text], input[type=number] {
+            width: 90%;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 2px;
+            /*resize: vertical;*/
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <form action="http://demo.codegym.vn/6/registration_form/register.php" method="post">
+        <label for="idname"> Họ Và Tên:</label><br>
+        <input id="idname" type="text" name="Uname" value=""><br><br>
+
+        <label for="idemail"> Email:</label><br>
+        <input id="idemail" type="text" name="Email" value=""><br><br>
+
+        <label for="idphone"> Số điện thoại:</label><br>
+        <input id="idphone" type="number" name="phone" value=""><br><br>
+
+        <label> Giới tính:</label><br>
+        <input type="radio" name="gender"> Nam
+        <input type="radio" name="gender"> Nữ<br><br>
+
+        <input type="submit" name="submit">
+
+    </form>
+</div>
+</body>
+</html>
