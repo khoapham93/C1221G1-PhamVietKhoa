@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập Biến kiểu dữ liệu toán tử</title>
+</head>
+<body>
+<script>
+    let inVatly = prompt("Nhập điểm môn Vật lý");
+    let inSinhhoc = prompt("Nhập điểm môn Sinh học");
+    let inHoahoc = prompt("Nhập điểm môn Hóa học");
+
+    let Vatly = parseInt(inVatly);
+    let Sinhhoc = parseInt(inSinhhoc);
+    let Hoahoc = parseInt(inHoahoc);
+
+    let tong = Vatly + Sinhhoc + Hoahoc;
+    let trungbinh = (Vatly + Sinhhoc + Hoahoc)/3;
+
+    document.write("Điểm trung bình 3 môn học là "+trungbinh);
+    document.write("<br/>");
+    document.write("Tổng Điểm 3 môn học là "+tong);
+
+</script>
+</body>
+</html>

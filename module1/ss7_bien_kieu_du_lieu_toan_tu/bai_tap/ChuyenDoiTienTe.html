@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+</head>
+<body>
+<form>
+    <table>
+        <tr>
+            <th>Amount </th>
+            <th>From Currency </th>
+            <th>To Currency </th>
+            <th></th>
+        </tr>
+        <tr>
+            <td>
+                <input id="input" type="text">
+            </td>
+            <td>
+                <select name="fCurrency" id="fCurrency">
+                    <option value="VND"> VND</option>
+                    <option value="USD"> USD</option>
+                    <option value="Euro"> Euro</option>
+                </select>
+            </td>
+            <td>
+                <select name="tCurrency" id="tCurrency">
+                    <option value="VND"> VND</option>
+                    <option value="USD"> USD</option>
+                    <option value="Euro"> Euro</option>
+                </select>
+            </td>
+            <td>
+                <button type="button" name="Convert" onclick="convert()">Convert</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Result:</td>
+            <td>
+                <div id="result"></div>
+            </td>
+        </tr>
+    </table>
+
+</form>
+<script>
+
+    function convert() {
+        let inputCurrency = document.getElementById("input").value;
+
+
+        let Currency = parseFloat(inputCurrency);
+        // let from = document.getElementById("fCurrency");
+        // let fromCurrency = from.options[from.selectedIndex].text
+
+        let fromCurrency = document.getElementById("fCurrency").value;
+
+        // let to = document.getElementById("tCurrency");
+        // let toCurrency = to.options[to.selectedIndex].text
+
+        let toCurrency = document.getElementById("tCurrency").value
+
+        let result_currency = 0.0;
+
+        if (fromCurrency == toCurrency) {
+            result_currency = Currency;
+        }
+        else if (fromCurrency=="VND" && toCurrency == "USD")
+        {
+            result_currency = Currency/23000;
+        }
+        else if(fromCurrency=="VND" && toCurrency == "Euro")
+        {
+            result_currency = Currency/30000;
+        }
+        else if (fromCurrency=="USD" && toCurrency == "VND")
+        {
+            result_currency = Currency*23000;
+
+        }
+        else if (fromCurrency=="USD" && toCurrency == "Euro")
+        {
+            result_currency = Currency/1.3;
+
+        }
+        else if (fromCurrency=="Euro" && toCurrency == "VND")
+        {
+            result_currency = Currency*30000;
+
+        }
+        else if (fromCurrency=="Euro" && toCurrency == "USD")
+        {
+            result_currency = Currency*1.3;
+        }
+        document.getElementById("result").innerText = result_currency.toString();
+        // alert("aa"+result_currency);
+    }
+
+</script>
+</body>
+</html>

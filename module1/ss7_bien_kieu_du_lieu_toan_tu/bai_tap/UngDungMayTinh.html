@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ung Dung May Tinh</title>
+</head>
+<body>
+<form>
+    <input type="Text" id="so_a">
+    <input type="Text" id="so_b"><br>
+
+    <input type="button" value="Addition(+)" onclick="Addition()">
+    <input type="button" value="Subtraction(-)" onclick="Subtraction()">
+    <input type="button" value="Multiplication(*)" onclick="Multiplication()">
+    <input type="button" value="Division(/)" onclick="Division()">
+    <div id = "result"></div>
+
+<script>
+
+    function Addition() {
+        let inputa = document.getElementById("so_a").value;
+        let inputb = document.getElementById("so_b").value;
+
+        let a = parseFloat(inputa);
+        let b = parseFloat(inputb);
+
+        let Ketqua = a+b;
+        document.getElementById("result").innerHTML = "Result Addition: "+Ketqua;
+    }
+    function Subtraction() {
+        let inputa = document.getElementById("so_a").value;
+        let inputb = document.getElementById("so_b").value;
+
+        let a = parseFloat(inputa);
+        let b = parseFloat(inputb);
+
+        let Ketqua = a-b;
+        document.getElementById("result").innerHTML = "Result Subtraction: "+Ketqua;
+    }
+    function Multiplication() {
+        let inputa = document.getElementById("so_a").value;
+        let inputb = document.getElementById("so_b").value;
+
+        let a = parseFloat(inputa);
+        let b = parseFloat(inputb);
+
+        let Ketqua = a*b;
+        document.getElementById("result").innerHTML = "Result Multiplication: "+Ketqua;
+    }
+    function Division() {
+        let inputa = document.getElementById("so_a").value;
+        let inputb = document.getElementById("so_b").value;
+
+        let a = parseFloat(inputa);
+        let b = parseFloat(inputb);
+
+        let Ketqua = a/b;
+        document.getElementById("result").innerHTML = "Result Division: "+Ketqua;
+    }
+</script>
+
+</form>
+</body>
+</html>
