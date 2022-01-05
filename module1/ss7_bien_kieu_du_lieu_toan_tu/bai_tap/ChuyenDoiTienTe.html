@@ -50,7 +50,7 @@
         let inputCurrency = document.getElementById("input").value;
 
 
-        let Currency = parseFloat(inputCurrency);
+        let currency = parseFloat(inputCurrency);
         // let from = document.getElementById("fCurrency");
         // let fromCurrency = from.options[from.selectedIndex].text
 
@@ -61,40 +61,40 @@
 
         let toCurrency = document.getElementById("tCurrency").value
 
-        let result_currency = 0.0;
+        let resultCurrency = 0.0;
 
         if (fromCurrency == toCurrency) {
-            result_currency = Currency;
+            resultCurrency = currency;
         }
         else if (fromCurrency=="VND" && toCurrency == "USD")
         {
-            result_currency = Currency/23000;
+            resultCurrency = currency/23000;
         }
         else if(fromCurrency=="VND" && toCurrency == "Euro")
         {
-            result_currency = Currency/30000;
+            resultCurrency = currency/30000;
         }
         else if (fromCurrency=="USD" && toCurrency == "VND")
         {
-            result_currency = Currency*23000;
+            resultCurrency = currency*23000;
 
         }
         else if (fromCurrency=="USD" && toCurrency == "Euro")
         {
-            result_currency = Currency/1.3;
+            resultCurrency = currency/1.3;
 
         }
         else if (fromCurrency=="Euro" && toCurrency == "VND")
         {
-            result_currency = Currency*30000;
+            resultCurrency = currency*30000;
 
         }
         else if (fromCurrency=="Euro" && toCurrency == "USD")
         {
-            result_currency = Currency*1.3;
+            resultCurrency = currency*1.3;
         }
-        document.getElementById("result").innerText = result_currency.toString();
-        // alert("aa"+result_currency);
+        document.getElementById("result").innerText = resultCurrency.toString();
+
     }
 
 </script>
