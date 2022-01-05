@@ -9,16 +9,16 @@
     <input type="Text" id="so_a">
     <input type="Text" id="so_b"><br>
 
-    <input id="add" type="button" value="Addition(+)" onclick="Calculate(this.id)">
-    <input id="sub" type="button" value="Subtraction(-)" onclick="Calculate(this.id)">
-    <input id="mul" type="button" value="Multiplication(*)" onclick="Calculate(this.id)">
-    <input id="div" type="button" value="Division(/)" onclick="Calculate(this.id)">
+    <input id="add" type="button" value="Addition(+)" onclick="calculate(this.id)">
+    <input id="sub" type="button" value="Subtraction(-)" onclick="calculate(this.id)">
+    <input id="mul" type="button" value="Multiplication(*)" onclick="calculate(this.id)">
+    <input id="div" type="button" value="Division(/)" onclick="calculate(this.id)">
     <div id="result"></div>
 
 
     <script>
 
-        function Calculate(Clicked_id) {
+        function calculate(Clicked_id) {
             let inputA = document.getElementById("so_a").value;
             let inputB = document.getElementById("so_b").value;
 

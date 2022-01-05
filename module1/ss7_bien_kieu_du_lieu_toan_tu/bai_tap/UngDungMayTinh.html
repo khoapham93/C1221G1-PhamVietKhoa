@@ -9,15 +9,15 @@
     <input type="Text" id="so_a">
     <input type="Text" id="so_b"><br>
 
-    <input type="button" value="Addition(+)" onclick="Addition()">
-    <input type="button" value="Subtraction(-)" onclick="Subtraction()">
-    <input type="button" value="Multiplication(*)" onclick="Multiplication()">
-    <input type="button" value="Division(/)" onclick="Division()">
+    <input type="button" value="Addition(+)" onclick="addition()">
+    <input type="button" value="Subtraction(-)" onclick="subtraction()">
+    <input type="button" value="Multiplication(*)" onclick="multiplication()">
+    <input type="button" value="Division(/)" onclick="division()">
     <div id = "result"></div>
 
 <script>
 
-    function Addition() {
+    function addition() {
         let inputA = document.getElementById("so_a").value;
         let inputB = document.getElementById("so_b").value;
 
@@ -27,7 +27,7 @@
         let ketQua = a+b;
         document.getElementById("result").innerHTML = "Result Addition: "+ketQua;
     }
-    function Subtraction() {
+    function subtraction() {
         let inputA = document.getElementById("so_a").value;
         let inputB = document.getElementById("so_b").value;
 
@@ -37,7 +37,7 @@
         let ketQua = a-b;
         document.getElementById("result").innerHTML = "Result Subtraction: "+ketQua;
     }
-    function Multiplication() {
+    function multiplication() {
         let inputA = document.getElementById("so_a").value;
         let inputB = document.getElementById("so_b").value;
 
@@ -47,7 +47,7 @@
         let ketQua = a*b;
         document.getElementById("result").innerHTML = "Result Multiplication: "+ketQua;
     }
-    function Division() {
+    function division() {
         let inputA = document.getElementById("so_a").value;
         let inputB = document.getElementById("so_b").value;
 
