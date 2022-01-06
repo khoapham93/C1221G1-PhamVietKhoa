@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ứng dụng máy tính đơn giản</title>
+    <style>
+        input[type = text] {
+            border: 1px solid black;
+            width: 100%;
+            height: 40px;
+            text-align: right;
+            font-size: 18px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .container {
+            height: 600px;
+            width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 20px 20px 20px 20px;
+        }
+
+        input[type = button], input[type = reset] {
+            height: 50px;
+            width: 70px;
+            margin-bottom: 5px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <form name="calculate">
+
+        <input id="result" type="text" name="result">
+        <input id="inputNum" type="text" name="inputNum">
+
+
+        <div align="right" style="padding-right: 8px">
+            <input style="background: darkkhaki" type="reset" id="c" value="C">
+        </div>
+
+        <input type="button" id="7" value="7" onclick="key(this.id)">
+        <input type="button" id="8" value="8" onclick="key(this.id)">
+        <input type="button" id="9" value="9" onclick="key(this.id)">
+        <input style="background: darkkhaki" type="button" id="nhan" value="X" onclick="keyCal('*')">
+
+        <input type="button" id="4" value="4" onclick="key(this.id)" onclick="key(this.id)">
+        <input type="button" id="5" value="5" onclick="key(this.id)" onclick="key(this.id)">
+        <input type="button" id="6" value="6" onclick="key(this.id)" onclick="key(this.id)">
+        <input style="background: darkkhaki" type="button" id="chia" value="/" onclick="keyCal(this.value)">
+
+        <input type="button" id="1" value="1" onclick="key(this.id)">
+        <input type="button" id="2" value="2" onclick="key(this.id)">
+        <input type="button" id="3" value="3" onclick="key(this.id)">
+        <input style="background: darkkhaki" type="button" id="cong" value="+" onclick="keyCal(this.value)">
+
+        <input type="button" id="dot" value="." onclick="keyDot()">
+        <input type="button" id="0" value="0" onclick="key(this.id)">
+        <input style="background: lightgreen" type="button" id="bang" value="=" onclick="keyEqual()">
+        <input style="background: darkkhaki" type="button" id="tru" value="-" onclick="keyCal(this.value)">
+    </form>
+</div>
+<script>
+
+    let preValue = null;
+    let curValue = null;
+    let Keypress = null;
+    let keyEqualPressed = false // Bắt sự kiện bấm phím bằng, để lấy kết quả lần trước thực hiện các phép tính tiếp theo
+    let keyNumPressed = true; // Bắt sự kiện nhấn các phím, để lấy kết quả lần trước thực hiện các phép tính tiếp theo
+
+    function keyCal(id) {
+        if (keyEqualPressed && keyNumPressed){
+            document.getElementById('result').value = document.getElementById('inputNum').value + id;
+        }
+        else{
+
+            document.getElementById('result').value += document.getElementById('inputNum').value + id;
+        }
+        document.getElementById('inputNum').value = null;
+        keyNumPressed = true;
+    }
+
+    function keyEqual() {
+        document.getElementById('result').value += document.getElementById('inputNum').value;
+
+        let chuoi = document.getElementById('result').value;
+        let ketQua = eval(chuoi);
+
+        document.getElementById('inputNum').value = null;
+
+        document.getElementById('inputNum').value = eval(ketQua);
+        keyEqualPressed = true;
+        keyNumPressed = true;
+    }
+
+    function keyDot() {
+        if (document.getElementById('inputNum').value === "")
+            document.getElementById('inputNum').value += "0.";
+        else
+            document.getElementById('inputNum').value += ".";
+    }
+
+    function key(id) {
+        document.getElementById('inputNum').value += id;
+        keyNumPressed = false;
+    }
+
+</script>
+</body>
+</html>

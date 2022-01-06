@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính chỉ số cân nặng</title>
+    <style>
+        input[type = text] {
+            border-radius: 5px;
+            border: 1px solid black;
+            width: 100%;
+            height: 40px;
+            text-align: right;
+            font-size: 18px;
+            margin-bottom: 10px;
+
+        }
+
+        .container {
+            border-radius: 5px;
+            background: palegreen;
+            height: 200px;
+            width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 20px 20px 20px 20px;
+        }
+
+        input[type = button] {
+            height: 50px;
+            width: 70px;
+            margin-bottom: 5px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <form>
+
+        <input type="text" id="weight" placeholder="Enter your weight (kg)">
+        <input type="text" id="height" placeholder="Enter your height (m)">
+        <input type="text" id="bmi" style="font-weight: bold">
+        <input type="button" id="bmibtn" name="bmi" value="Tính BMI" onclick="tinhBMI()">
+    </form>
+</div>
+<script>
+    function tinhBMI() {
+
+        let weight = parseFloat(document.getElementById('weight').value);
+        let height = parseFloat(document.getElementById('height').value);
+
+        let bmi = weight / (Math.pow(height, 2));
+        let message = null;
+
+        if (bmi < 18)
+            message = "Underweight";
+        else if (bmi < 25.0)
+            message = "Normal";
+        else if (bmi < 30.0)
+            message = "Overweight";
+        else
+            message = "Obese";
+
+        document.getElementById('bmi').value = Math.round(bmi,2) + " " +message;
+    }
+</script>
+</body>
+</html>
