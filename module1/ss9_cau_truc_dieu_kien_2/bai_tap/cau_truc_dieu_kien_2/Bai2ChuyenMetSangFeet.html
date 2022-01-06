@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let inMet = prompt("Nhập giá trị đo bằng met");
+
+    let met = parseFloat(inMet);
+    if (met) {
+        let feet = met*3.2808;
+        document.write(+met + " m đổi sang feet là  " + feet );
+        document.write("<br/>");
+    } else {
+        document.write("Mời bạn nhập vào giá trị met");
+    }
+
+</script>
+</body>
+</html>

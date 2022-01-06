@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let inDoC = prompt("Nhập Nhiệt độ bằng độ C");
+
+    let doC = parseFloat(inDoC);
+    if (doC) {
+        let doF = (9 * doC) / 5 + 32;
+        document.write(+doC + " Độ C đổi sang độ F là  " + doF + " dộ F");
+        document.write("<br/>");
+    } else {
+        document.write("Mời bạn nhập vào giá trị nhiệt độ");
+    }
+
+</script>
+</body>
+</html>

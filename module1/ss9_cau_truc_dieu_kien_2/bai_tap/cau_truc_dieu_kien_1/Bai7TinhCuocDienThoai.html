@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let thoiGian = parseInt(prompt("Nhập vào tổng số phút đã sử dụng:"));
+    let tienCuoc = 0;
+    if (thoiGian>200){
+        tienCuoc = (thoiGian-200)*200+150*400+50*600;
+    }
+    else if(thoiGian>50){
+        tienCuoc=(thoiGian-50)*400+50*600;
+    }
+    else {
+        tienCuoc=thoiGian*600;
+    }
+    alert("Số tiền cước điện thoại là: "+tienCuoc+ " đồng");
+</script>
+</body>
+</html>

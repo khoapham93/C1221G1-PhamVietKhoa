@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let canhKe = parseFloat(prompt("Nhập cạnh đáy tam giác vuông"));
+    let chieuCao = parseFloat(prompt("Nhập đường cao tam giác vuông"));
+
+    if (isNaN(canhKe) || isNaN(chieuCao)) {
+        alert("Mời bạn nhập vào số");
+    }
+    else {
+        let dienTich = ((canhKe*chieuCao)/2);
+        alert("Diện tích hình tam giác vuông là: "+dienTich);
+    }
+
+</script>
+</body>
+</html>

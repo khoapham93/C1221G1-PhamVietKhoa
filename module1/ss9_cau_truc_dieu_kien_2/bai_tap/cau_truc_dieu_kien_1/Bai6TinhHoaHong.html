@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let doanhSo = parseInt(prompt("Nhập doanh số bán hàng"));
+    const billion = 1000000000;
+    const namTramTrieu = 500000000;
+    const motTramTrieu = 100000000;
+    if (doanhSo > billion){
+        alert("Hoa Hồng bán hàng là: "+0.06*doanhSo);
+    }
+    else if (doanhSo > namTramTrieu){
+        alert("Hoa Hồng bán hàng là: "+0.04*doanhSo);
+    }
+    else if (doanhSo > motTramTrieu){
+        alert("Hoa Hồng bán hàng là: "+0.03*doanhSo);
+    }
+    else {
+        alert("Hoa Hồng bán hàng là: "+0.01*doanhSo);
+    }
+</script>
+</body>
+</html>
