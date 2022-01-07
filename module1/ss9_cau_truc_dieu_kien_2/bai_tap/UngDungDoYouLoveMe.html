@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        button {
+            height: 30px;
+            width: 60px;
+            /*position: absolute;*/
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    </style>
+</head>
+<body>
+
+<h1 style="position:absolute; left:600px; top:100px;">Do You Love Me?</h1>
+
+<button style="position:absolute; left:650px; top:170px;" id="yes" onclick="yesButtonClick()">Yes</button>
+<button style="position:absolute; left:720px; top:170px;" id="no" onmouseover="noButtonMouseOver()">No</button>
+
+</body>
+
+<script>
+
+    function yesButtonClick() {
+        alert("<3");
+    }
+
+    function noButtonMouseOver() {
+
+        let x = Math.random()* window.innerWidth;
+        let y = Math.random()* window.innerHeight;
+
+        let noButton = document.getElementById("no");
+
+        noButton.style.left = parseInt(x) + 'px';
+        noButton.style.top = parseInt(y) + 'px';
+
+    }
+</script>
+</html>

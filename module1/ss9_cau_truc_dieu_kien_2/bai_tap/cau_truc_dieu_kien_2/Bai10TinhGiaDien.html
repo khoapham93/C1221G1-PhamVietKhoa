@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let chiSoDien = parseFloat(prompt("Nhập vào chỉ số điện tiêu thụ Kwh:"));
+    let tienDienChuaThue, tienDienTinhThue;
+
+    if (chiSoDien>400){
+        tienDienChuaThue = (chiSoDien-400)*2927 + 100*2834 + 100*2536 + 100*2014 + 50*1734 + 50*1678;
+    }
+    else  if(chiSoDien>300){
+        tienDienChuaThue = (chiSoDien-300)*2834 + 100*2536 + 100*2014 + 50*1734 + 50*1678;
+
+    }
+    else  if(chiSoDien>200){
+        tienDienChuaThue = (chiSoDien-200)*2536 + 100*2014 + 50*1734 + 50*1678;
+
+    }
+    else  if(chiSoDien>100){
+        tienDienChuaThue = (chiSoDien-100)*2014 + 50*1734 + 50*1678;
+
+    }
+    else  if(chiSoDien>50){
+        tienDienChuaThue = (chiSoDien-50)*1734  + 50*1678;
+
+    }
+    else  {
+        tienDienChuaThue = chiSoDien *1678;
+    }
+
+    tienDienTinhThue = tienDienChuaThue * 1.1;
+
+    alert("Tiền điện tiêu thụ đã tính thuế VAT là "+tienDienTinhThue.toFixed(2) + " đồng");
+</script>
+</body>
+</html>

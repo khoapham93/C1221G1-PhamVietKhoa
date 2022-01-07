@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính Thuế TNCN</title>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18px;
+        }
+
+        label {
+            margin-top: 10px;
+        }
+
+        input[type = number] {
+            border-radius: 5px;
+            border: 1px solid black;
+            width: 100%;
+            height: 40px;
+            text-align: right;
+            margin-bottom: 10px;
+
+        }
+
+        .container {
+            border-radius: 5px;
+            background: palegreen;
+            height: 300px;
+            width: 350px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 20px 20px 20px 20px;
+        }
+
+        input[type = button] {
+            height: 50px;
+            width: 100px;
+            margin-bottom: 5px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <form>
+        <label for="income"> Tổng thu nhập 1 năm (tr.Đồng)</label>
+        <input type="number" id="income" placeholder="đã trừ bảo hiểm (tr.Đồng)">
+
+        <label for="dependent"> Số người phụ thuộc</label>
+        <input type="number" id="dependent">
+
+        <label for="tax"> Thuế TNCN phải nộp cả năm (tr.Đồng)</label>
+        <input type="number" id="tax" style="font-weight: bold">
+
+        <input type="button" id="calTax" name="calTax" value="Tính TNCN" onclick="personalIncomeTax()">
+    </form>
+</div>
+<script>
+    function personalIncomeTax() {
+
+        let inputIncome = parseFloat(document.getElementById('income').value);
+        let inputDependent = parseInt(document.getElementById('dependent').value);
+        let taxPayable;
+        let taxableIncome = inputIncome - (132 + inputDependent * 52.8);
+
+        if (taxableIncome > 960) {
+
+            taxPayable = 0.35 * taxableIncome - 12*9.85;
+
+        } else if (taxableIncome > 624) {
+
+            taxPayable = 0.3 * taxableIncome - 12*5.85;
+
+        } else if (taxableIncome > 384) {
+
+            taxPayable = 0.25 * taxableIncome - 12*3.25;
+
+        } else if (taxableIncome > 216) {
+
+            taxPayable = 0.2 * taxableIncome - 12*1.65;
+
+        } else if (taxableIncome > 120) {
+
+            taxPayable = 0.15 * taxableIncome - 12*0.75;
+
+        } else if (taxableIncome > 60) {
+
+            taxPayable = 0.1 * taxableIncome - 12*0.25;
+
+        } else if(taxableIncome > 0){
+
+            taxPayable = 0.05 * taxableIncome;
+        } else {
+            taxPayable = 0;
+        }
+
+        document.getElementById('tax').value =  taxPayable.toFixed(3);
+    }
+</script>
+</body>
+</html>
