@@ -18,7 +18,7 @@
 
     <script>
 
-        function calculate(Clicked_id) {
+        function calculate(clickedId) {
             let inputA = document.getElementById("so_a").value;
             let inputB = document.getElementById("so_b").value;
 
@@ -26,15 +26,15 @@
             let b = parseFloat(inputB);
             let ketQua = 0;
 
-            if (Clicked_id == "add") {
+            if (clickedId == "add") {
                 ketQua = a + b
-            } else if (Clicked_id == "sub") {
+            } else if (clickedId == "sub") {
                 ketQua = a - b
 
-            } else if (Clicked_id == "mul") {
+            } else if (clickedId == "mul") {
                 ketQua = a * b
 
-            } else if (Clicked_id == "div") {
+            } else if (clickedId == "div") {
                 ketQua = a / b
             }
             document.getElementById("result").innerHTML = "Result Division: " + ketQua;
