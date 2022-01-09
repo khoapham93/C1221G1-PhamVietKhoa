@@ -2,9 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Bang Cuu Chuong</title>
+    <style>
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid black;
+            text-align: center;
+            padding: 8px;
+        }
+    </style>
 </head>
 <body>
-$END$
+<h1 align="center">Bảng cửu chương</h1>
+
+<script>
+    let bangCuuChuong, i, j,displayText;
+
+    bangCuuChuong = "<table>";
+
+    for (i = 1;i<=9;i++){
+
+        bangCuuChuong = bangCuuChuong + "<tr>";
+
+        for (j = 2;j<=9;j++){
+            displayText =j+ "x" +i+ "=" +j*i;
+            bangCuuChuong = bangCuuChuong + "<td>" +displayText+ "</td>";
+        }
+        bangCuuChuong = bangCuuChuong + "</tr>";
+    }
+    bangCuuChuong = bangCuuChuong + "</table>";
+
+    document.write(bangCuuChuong);
+
+</script>
 </body>
 </html>
