@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let soTienBanDau = parseInt(prompt("Nhập số tiền ban đầu:"));
+    let laiSuat = parseFloat(prompt("Nhập lãi suất hàng tháng"));
+    let kyHan = parseInt(prompt("Nhập số tháng tính lãi"));
+    let tienLai;
+
+    for (let i =1; i <=kyHan; i++){
+        tienLai = soTienBanDau*laiSuat/100;
+        soTienBanDau += tienLai;
+    }
+    alert("Số tiền sau kỳ hạn là:"+soTienBanDau.toFixed(0));
+</script>
+</body>
+</html>

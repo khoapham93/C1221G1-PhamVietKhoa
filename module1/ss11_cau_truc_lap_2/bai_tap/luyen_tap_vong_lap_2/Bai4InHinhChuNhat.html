@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let canhDai = parseInt(prompt("Nhập chiều dài hình chữ nhật"));
+    let canhNgan = parseInt(prompt("Nhập chiều rộng hình chữ nhật"));
+
+    for (let i = 1;i<=canhNgan; i ++){
+
+        for (let j = 1; j<= canhDai; j++){
+
+            if (j == 1 || j == canhDai || i == 1 || i == canhNgan){
+                document.write("*");
+            } else {
+                document.write("&nbsp;&nbsp;");
+            }
+        }
+        document.write("<br>");
+    }
+</script>
+</body>
+</html>

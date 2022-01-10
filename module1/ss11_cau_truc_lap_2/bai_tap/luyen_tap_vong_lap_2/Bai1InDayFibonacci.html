@@ -6,24 +6,30 @@
 </head>
 <body>
 <script>
+    let quantity = parseInt(prompt("Nhập vào số lượng số Fibonacci muốn in ra:"));
+
     let soDau = 0;
     let soCuoi = 1;
     let soFibonaci = 0;
 
-    for (let i = 0; i<20; i++){
+    if (quantity < 1 ){
+        alert("Nhập vào số lớn hơn 1");
+    }else {
+        for (let i = 0; i<quantity; i++){
+            if (i<=1){
+                soFibonaci = i;
+            }
+            else {
+                soFibonaci = soDau + soCuoi;
+                soDau = soCuoi;
+                soCuoi = soFibonaci;
+            }
 
-        if (i<=1){
-            soFibonaci = i;
+            document.write( i+1 + ": "+soFibonaci);
+            document.write("<br>");
         }
-        else {
-            soFibonaci = soDau + soCuoi;
-            soDau = soCuoi;
-            soCuoi = soFibonaci;
-        }
-
-        document.write(soFibonaci);
-        document.write("<br>");
     }
+
 </script>
 </body>
 </html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let duongCao = prompt("Nhập đường độ cao hình trái tim(chia hết cho 3)");
+
+
+    for (let i = 1; i <= duongCao / 3; i++) {
+        //Tam giac can
+        for (let j = duongCao / 3; j > i; j--) {
+            document.writeln("&nbsp;&nbsp;");
+        }
+        for (let k = 1; k <= 2 * i - 1; k++) {
+            if (i == 1 || k == 1 || k == 2 * i - 1) {
+                document.writeln("*");
+            } else {
+                document.writeln("&nbsp;&nbsp;");
+            }
+        }
+
+        //Tao tam giac trong, de tao tiep 1 tam giac can
+        for (let k = duongCao / 3; k > i; k--) {
+
+            document.writeln("&nbsp;&nbsp;");
+        }
+
+        //tam giac can thu 2
+        for (let j = duongCao / 3; j > i; j--) {
+            document.writeln("&nbsp;&nbsp;");
+        }
+        for (let k = 1; k <= 2 * i - 1; k++) {
+            if (i == 1 || k == 1 || k == 2 * i - 1) {
+                document.writeln("*");
+            } else {
+                document.writeln("&nbsp;&nbsp;");
+            }
+        }
+        document.writeln("<br>");
+
+    }
+    //Tam giac can nguoc
+    for (let i = 2 * duongCao / 3; i >= 1; i--) {
+
+        for (let j = 2 * duongCao / 3; j > i; j--) {
+            document.writeln("&nbsp;&nbsp;");
+        }
+
+        for (let k = 1; k <= 2 * i - 1; k++) {
+            if (i == 1 || k == 1 || k == 2 * i - 1) {
+                document.writeln("*");
+            } else {
+                document.writeln("&nbsp;&nbsp;");
+            }
+        }
+        document.writeln("<br>");
+    }
+
+</script>
+</body>
+</html>
