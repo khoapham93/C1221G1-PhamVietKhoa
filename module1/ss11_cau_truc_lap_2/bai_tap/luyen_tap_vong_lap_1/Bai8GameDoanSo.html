@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        button {
+            margin-top: 50px;
+            width: 100px;
+            height: 60px;
+        }
+    </style>
+</head>
+<body>
+<div align="center">
+    <button id="game" name="game" onclick="gameDoanSo()"> chơi</button>
+</div>
+</body>
+<script>
+    function gameDoanSo() {
+        count = 0;
+        let soDau = parseInt(prompt("Nhập vào giá trị đầu tiên trong khoảng muốn đoán"));
+        let soCuoi = parseInt(prompt("Nhập vào giá trị cuối trong khoảng muốn đoán"));
+        let soDoan = parseInt(prompt("Nhập vào giá trị muốn đoán"));
+
+        let soTrungThuong = Math.floor(Math.random() * (soCuoi - soDau + 1)) + soDau;
+
+        console.log(soTrungThuong); //checking code
+
+        while (soDoan != soTrungThuong) {
+            count++;
+            if (count < 3) {
+                if (soDoan < soTrungThuong) {
+
+                    alert("Số bạn dự đoán đang nhỏ hơn, xin mời đoán lại");
+
+                } else if (soDoan > soTrungThuong){
+
+                    alert("Số bạn dự đoán đang lớn hơn, xin mời đoán lại");
+                }
+                else{
+
+                    alert("Bạn nhập vào không phải số, xin mời nhập lại");
+                }
+
+                soDoan = parseInt(prompt("Nhập vào giá trị muốn đoán"));
+            }
+            else {
+
+                alert("Số bạn dự đoán chưa chính xác, Bạn đã hết lượt lựa chọn");
+                break;
+            }
+        }
+
+        if (soDoan == soTrungThuong){
+
+            alert("Chúc mừng bạn đã đoán chính xác");
+        }
+
+    }
+</script>
+</html>

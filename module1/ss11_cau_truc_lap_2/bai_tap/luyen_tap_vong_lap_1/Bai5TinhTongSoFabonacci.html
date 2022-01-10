@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let soDau = 0;
+    let soCuoi = 1;
+    let soFibonaci = 0;
+    let sum = 0;
+    for (let i = 0; i<20; i++){
+
+        if (i<=1){
+            soFibonaci = i;
+        }
+        else {
+            soFibonaci = soDau + soCuoi;
+            soDau = soCuoi;
+            soCuoi = soFibonaci;
+        }
+        sum += soFibonaci;
+    }
+    alert("Tổng 20 số Fabonacci đầu tiên là: "+sum);
+
+</script>
+</body>
+</html>

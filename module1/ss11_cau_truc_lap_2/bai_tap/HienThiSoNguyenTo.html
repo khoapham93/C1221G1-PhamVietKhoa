@@ -21,18 +21,23 @@
     } else {
         while (count < quantity){
 
-            for (let i = 2; i<= Math.sqrt(number);i++){
-                if (number % i == 0){
+            for (let i = 2; i< number;i++){
+                if (number % i === 0){
                     demUoc++;
+                    break;
                 }
             }
-            if (demUoc == 0){
+
+            if (demUoc === 0){
                 count += 1;
                 displaySoNguyenTo += count+ ": " + number + "<br>";
             }
+
             demUoc = 0;
             number += 1;
+
         }
+
     }
     document.getElementById("songuyento").innerHTML = displaySoNguyenTo;
 
