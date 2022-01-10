@@ -10,16 +10,16 @@
 
 </body>
 <script>
-    let quantily = parseInt(prompt("Nhập vào số lượng số nguyên tố muốn in ra:"));
+    let quantity = parseInt(prompt("Nhập vào số lượng số nguyên tố muốn in ra:"));
     let displaySoNguyenTo = "";
     let count = 0;
     let number = 2;
     let demUoc = 0;
 
-    if (quantily < 1) {
+    if (quantity < 1) {
         displaySoNguyenTo = "Nhập vào số nguyên lớn hơn 1";
     } else {
-        while (count < quantily){
+        while (count < quantity){
 
             for (let i = 2; i<= Math.sqrt(number);i++){
                 if (number % i == 0){
@@ -35,7 +35,6 @@
         }
     }
     document.getElementById("songuyento").innerHTML = displaySoNguyenTo;
-
 
 </script>
 </html>
