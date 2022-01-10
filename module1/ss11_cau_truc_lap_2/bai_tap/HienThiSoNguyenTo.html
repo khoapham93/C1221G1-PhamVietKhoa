@@ -6,10 +6,36 @@
 </head>
 <body>
 <h2>Danh sách các số nguyên tố:</h2>
-<p id="demo"></p>
+<p id="songuyento"></p>
 
 </body>
 <script>
+    let quantily = parseInt(prompt("Nhập vào số lượng số nguyên tố muốn in ra:"));
+    let displaySoNguyenTo = "";
+    let count = 0;
+    let number = 2;
+    let demUoc = 0;
+
+    if (quantily < 1) {
+        displaySoNguyenTo = "Nhập vào số nguyên lớn hơn 1";
+    } else {
+        while (count < quantily){
+
+            for (let i = 2; i<= Math.sqrt(number);i++){
+                if (number % i == 0){
+                    demUoc++;
+                }
+            }
+            if (demUoc == 0){
+                count += 1;
+                displaySoNguyenTo += count+ ": " + number + "<br>";
+            }
+            demUoc = 0;
+            number += 1;
+        }
+    }
+    document.getElementById("songuyento").innerHTML = displaySoNguyenTo;
+
 
 </script>
 </html>
