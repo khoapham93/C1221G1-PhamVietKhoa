@@ -8,10 +8,9 @@
 <script>
     let duongCao = prompt("Nhập đường độ cao hình trái tim(chia hết cho 3)");
 
-
-    for (let i = 1; i <= duongCao / 3; i++) {
+    for (let i = 0; i <= duongCao / 3; i++) {
         //Tam giac can
-        for (let j = duongCao / 3; j > i; j--) {
+        for (let j = duongCao / 3; j >= i; j--) {
             document.writeln("&nbsp;&nbsp;");
         }
         for (let k = 1; k <= 2 * i - 1; k++) {
@@ -24,7 +23,6 @@
 
         //Tao tam giac trong, de tao tiep 1 tam giac can
         for (let a = duongCao / 3; a > i; a--) {
-
             document.writeln("&nbsp;&nbsp;");
         }
 
@@ -43,14 +41,15 @@
 
     }
     //Tam giac can nguoc
-    for (let i = 2 * duongCao / 3; i >= 1; i--) {
+    for (let i = 2 * duongCao / 3; i >= 0; i--) {
 
         for (let j = 2 * duongCao / 3; j > i; j--) {
             document.writeln("&nbsp;&nbsp;");
         }
 
-        for (let k = 1; k <= 2 * i - 1; k++) {
-            if (i == 1 || k == 1 || k == 2 * i - 1) {
+        for (let k = 0; k <= 2 * i - 1; k++) {
+
+            if (i == 0 || k == 0 || k == 2 * i - 1) {
                 document.writeln("*");
             } else {
                 document.writeln("&nbsp;&nbsp;");
