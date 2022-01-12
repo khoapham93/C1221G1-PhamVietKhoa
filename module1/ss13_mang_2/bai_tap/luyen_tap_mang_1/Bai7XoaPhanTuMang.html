@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = prompt("Nhập vào một chuỗi dãy số nguyên, các số cách nhau bởi dấu ","");
+
+    let soNguyen = prompt("Nhập vào một số nguyên V");
+
+    let myArray = str.split(",");
+
+    if (myArray.includes(soNguyen)) {
+        myArray.splice(myArray.indexOf(soNguyen), 1);
+        myArray.push(0);
+        alert("Mảng sau khi đã xóa phần tử V là: "+myArray);
+
+    }else {
+        alert("Số nguyên V không nằm trong mảng ");
+    }
+
+</script>
+</body>
+</html>

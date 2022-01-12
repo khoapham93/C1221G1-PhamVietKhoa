@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = prompt("Nhập vào một chuỗi dãy số, các số cách nhau bởi dấu ","");
+    let soNguyen = prompt("Nhập vào một số nguyên V");
+    let myArray = str.split(",");
+    console.log(myArray);
+
+    //includes or indexof => checking element of array, includes return boolean result
+
+    if (myArray.includes(soNguyen)){
+        alert("Số nguyên V có trong mảng");
+
+    }else {
+        alert("Số nguyên V không có trong mảng");
+    }
+
+</script>
+</body>
+</html>
