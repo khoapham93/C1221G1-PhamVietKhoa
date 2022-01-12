@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numberArray = [1,3,4,41,52,46,6,32,50,10];
+    let max =numberArray[0];
+    let indexNumber = 0;
+
+    for (let i = 1; i < numberArray.length; i++){
+        if(max < numberArray[i]){
+            max = numberArray[i];
+            indexNumber = i;
+        }
+    }
+    alert("Phần từ có giá trị lớn nhất trong mảng là "+max +" ở vị trí "+indexNumber);
+</script>
+</body>
+</html>
