@@ -6,9 +6,25 @@
 </head>
 <body>
 <script>
-    let number = [1,34,5,623,346,574,46,35,2];
-    number.reverse();
-    alert("Mảng sau khi đảo ngược là: "+number);
+    //nhập máng
+    let number;
+    let checking;
+    do {
+        number = prompt("nhâp vào độ dài của mảng");
+        checking = (parseInt(number)==number)&& number>0;
+    }while (!checking);
+
+    number = parseInt(number);
+    let arr = new Array(number);
+
+    for (let i = 0; i <arr.length ; i++) {
+        arr[i] = parseInt(prompt("nhập phần tử thứ : " + i));
+    }
+    alert("Mảng vừa nhập là:"+arr);
+    
+    arr.reverse();
+
+    alert("Mảng sau khi đảo ngược là: "+arr);
 </script>
 </body>
 </html>

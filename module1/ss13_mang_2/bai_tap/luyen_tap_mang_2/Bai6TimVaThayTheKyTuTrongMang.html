@@ -6,8 +6,10 @@
 </head>
 <body>
 <script>
+
     let number;
     let checking;
+
     do {
         number = prompt("nhap vao do dai cua mang");
         checking = (parseInt(number) == number) && number > 0;
@@ -17,17 +19,18 @@
     let myArray = new Array(number);
 
     for (let i = 0; i < myArray.length; i++) {
-        myArray[i] = parseInt(prompt("Nhap vao phan tu thu: " + i));
+        myArray[i] = prompt("Nhap vao phan tu thu: " + i);
     }
     alert("Mang vua nhap vao la:" + myArray);
 
 
-    myArray.sort(function (a, b) {
-        return b - a;
-    });
+    for (let i = 0; i < myArray.length; i++) {
+        if (myArray[i] == "-") {
+            myArray[i] = "_";
+        }
+    }
 
-    alert("mang sau khi sap xep giam dan " + myArray);
-
+    alert("Mảng sau khi thay thế: " + myArray);
 </script>
 </body>
 </html>

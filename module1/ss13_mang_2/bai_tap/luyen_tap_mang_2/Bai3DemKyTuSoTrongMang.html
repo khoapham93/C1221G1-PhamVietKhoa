@@ -6,6 +6,8 @@
 </head>
 <body>
 <script>
+
+    let count = 0;
     let number;
     let checking;
     do {
@@ -17,17 +19,19 @@
     let myArray = new Array(number);
 
     for (let i = 0; i < myArray.length; i++) {
-        myArray[i] = parseInt(prompt("Nhap vao phan tu thu: " + i));
+        myArray[i] = prompt("Nhap vao phan tu thu: " + i);
     }
-    alert("Mang vua nhap vao la:" + myArray);
+    alert("Mang vua nhap vao la: " + myArray);
 
+    for (let i = 0; i < myArray.length; i++) {
+        if (isNaN(parseInt(myArray[i]))) {
+            continue;
+        } else {
+            count++;
+        }
+    }
 
-    myArray.sort(function (a, b) {
-        return b - a;
-    });
-
-    alert("mang sau khi sap xep giam dan " + myArray);
-
+    alert("Số ký tự số trong chuỗi vừa nhập: " + count);
 </script>
 </body>
 </html>

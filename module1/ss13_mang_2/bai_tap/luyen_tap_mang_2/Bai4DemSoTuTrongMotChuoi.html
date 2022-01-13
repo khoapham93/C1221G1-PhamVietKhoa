@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = prompt("Nhập vào một chuỗi");
+    let myArray;
+
+    str = str.replace(/\s+/g,' ').trim(); // loại bỏ tất cả các khoảng trắng thừa
+
+    if (str == ""){
+        alert("SỐ ký tự trong chuỗi vừa nhập là 0");
+
+    }else {
+        myArray = str.split(" ");
+        alert("SỐ ký tự trong chuỗi vừa nhập: " +myArray.length);
+    }
+
+</script>
+</body>
+</html>

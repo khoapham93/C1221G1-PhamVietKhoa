@@ -6,14 +6,42 @@
 </head>
 <body>
 <script>
-    let strA = prompt("Nhập vào một chuỗi dãy số thứ nhất, các số cách nhau bởi dấu ","");
-    let strB = prompt("Nhập vào một chuỗi dãy số thứ hai, các số cách nhau bởi dấu ","");
+    let number1;
+    let checkingA;
+    do {
+        number1 = prompt("nhap vao do dai cua mang A");
+        checkingA = (parseInt(number1) == number1) && number1 > 0;
+    } while (!checkingA);
 
-    let myArrayA = strA.split(",");
-    let myArrayB = strB.split(",");
+    number1 = parseInt(number1);
+    let myArrayA = new Array(number1);
+
+    for (let i = 0; i < myArrayA.length; i++) {
+        myArrayA[i] = parseInt(prompt("Nhap vao phan tu thu: " + i));
+    }
+    alert("Mang A vua nhap vao la:" + myArrayA);
+
+
+    let number2;
+    let checkingB;
+    do {
+        number2 = prompt("nhap vao do dai cua mang B");
+        checkingB = (parseInt(number2) == number2) && number2 > 0;
+    } while (!checkingB);
+
+    number2 = parseInt(number2);
+    let myArrayB = new Array(number2);
+
+    for (let i = 0; i < myArrayB.length; i++) {
+        myArrayB[i] = parseInt(prompt("Nhap vao phan tu thu: " + i));
+    }
+    alert("Mang B vua nhap vao la:" + myArrayB);
+
 
     let myArrayC = myArrayA.concat(myArrayB);
+
     alert("Mảng sau khi nối là: "+myArrayC);
+
 </script>
 </body>
 </html>

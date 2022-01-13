@@ -6,14 +6,27 @@
 </head>
 <body>
 <script>
-    let str = prompt("Nhập vào một chuỗi dãy số, các số cách nhau bởi dấu ","");
-    let soNguyen = prompt("Nhập vào một số nguyên V");
-    let myArray = str.split(",");
-    console.log(myArray);
+
+    let number;
+    let checking;
+    do {
+        number = prompt("nhâp vào độ dài của mảng");
+        checking = (parseInt(number)==number)&& number>0;
+    }while (!checking);
+
+    number = parseInt(number);
+    let arr = new Array(number);
+
+    for (let i = 0; i <arr.length ; i++) {
+        arr[i] = parseInt(prompt("nhập phần tử thứ : " + i));
+    }
+    alert("Mảng vừa nhập là:"+arr);
+
+    let soNguyen = parseInt(prompt("Nhập vào một số nguyên V"));
 
     //includes or indexof => checking element of array, includes return boolean result
 
-    if (myArray.includes(soNguyen)){
+    if (arr.includes(soNguyen)){
         alert("Số nguyên V có trong mảng");
 
     }else {

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        td {
+            height: 40px;
+            width: 40px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+<div align="center" id="displayBoard"></div>
+</body>
+<script>
+
+    let arr = new Array(10);
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = new Array(10);
+        for (let j = 0; j < arr[i].length; j++) {
+            arr[i][j] = "";
+        }
+    }
+    let checkingPlayer = true;
+    hienthi();
+
+    function hienthi() {
+        let tableString = "<table border='1'>";
+        for (let i = 0; i < 10; i++) {
+            tableString += "<tr>";
+            for (let j = 0; j < 10; j++) {
+                tableString += '<td onclick="checkingCaro(' + i + ',' + j + ')">' + arr[i][j] + '</td>';
+            }
+            tableString += "</tr>";
+
+        }
+        tableString += "</table>";
+        document.getElementById("displayBoard").innerHTML = tableString;
+    }
+
+    function checkingCaro(i, j) {
+        if(checkingAlreadyClick(i,j)){
+            if (checkingPlayer) {
+                arr[i][j] = "X";
+                checkingPlayer = false;
+                if (checkingWinner()){
+                    alert("Nguoi choi 1 thang");
+
+                }
+            } else {
+                arr[i][j] = "O";
+                checkingPlayer = true;
+                if (checkingWinner()){
+                    alert("Nguoi choi 2 thang");
+                }
+            }
+        }
+
+        hienthi();
+
+        if (checkingWinner()){
+            if(confirm("Ban co muon choi lai khong?")){
+                location.reload();
+            }
+        }
+    }
+
+    function checkingAlreadyClick(i, j) {
+        if (arr[i][j] != "") {
+            alert("Ô này đã đi rồi. Mời đi lại");
+            return false;
+        }else {
+            return true;
+        }
+    }
+    
+    function checkingWinner() {
+        for (let i = 0; i <arr.length ; i++) {
+            for (let j = 0; j <arr[i].length ; j++) {
+                if (arr[i][j]=="X"){
+                    if(arr[i][j+1]=="X" && arr[i][j+2]=="X"){
+                        return true;
+                    }
+                    if(arr[i+1][j]=="X" && arr[i+2][j]=="X"){
+                        return true;
+                    }
+                    if(arr[i-1][j-1]=="X" && arr[i-2][j-2]=="X"){
+                        return true;
+                    }
+                    if(arr[i-1][j+1]=="X" && arr[i-2][j+2]=="X"){
+                        return true;
+                    }
+                } else if (arr[i][j]=="O"){
+                    if(arr[i][j+1]=="O" && arr[i][j+2]=="O"){
+                        return true;
+                    }
+                    if(arr[i+1][j]=="O" && arr[i+2][j]=="O"){
+                        return true;
+                    }
+                    if(arr[i-1][j-1]=="O" && arr[i-2][j-2]=="O"){
+                        return true;
+                    }
+                    if(arr[i-1][j+1]=="O" && arr[i-2][j+2]=="O"){
+                        return true;
+                    }
+                }
+            }
+        }
+    }
+
+</script>
+</html>
