@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let str = "abfbd";
+    // let b = str.split("");
+    // alert(b.join(""));
+
+    let str = prompt("Nhập vào từ kiểm tra:");
+    let checking = isPalindrome(str);
+    if (checking) {
+        alert("từ nhập vào là từ đối xứng")
+    }else {
+        alert("từ nhập vào không đối xứng")
+    }
+
+    //dùng vòng lặp
+    function isPalindrome(strInput) {
+        let arr = strInput.split("");
+        let i;
+        let j;
+
+        for (i = 0,j = arr.length -1; i < j; i++,j--) {
+            if (arr[i] != arr[j]){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    // Dùng đệ quy
+
+    // function isPalindrome(strInput) {
+    //     let arr = strInput.split("");
+    //     if (arr.length > 1) {
+    //         if (arr[0] == arr[arr.length - 1]) {
+    //             arr.shift();
+    //             arr.pop();
+    //             return isPalindrome(arr.join(""));
+    //         } else {
+    //             return false
+    //         }
+    //     }
+    //     return true;
+    // }
+
+</script>
+</body>
+</html>

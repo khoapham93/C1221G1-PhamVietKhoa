@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    let circleRadius = 5;
+    let area = calCircleArea(circleRadius);
+    let perimeter = calCirclePerimeter(circleRadius);
+
+    document.write("Chu vi hình tròn có bán kính "+ circleRadius+" là "+perimeter);
+    document.write("<br>");
+    document.write("Diện tích hình tròn có bán kính "+ circleRadius+" là "+area);
+
+    function calCircleArea(radius) {
+        let result =  Math.PI * Math.pow(radius,2);
+        return result;
+    }
+    function calCirclePerimeter(radius) {
+        let result =  Math.PI * radius * 2;
+        return result;
+    }
+</script>
+</body>
+</html>

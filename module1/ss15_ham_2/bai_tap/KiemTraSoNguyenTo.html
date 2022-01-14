@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> Danh sach cac so nguyen to nho hon 10000</h1>
+<p id="display"></p>
+<script>
+
+    function isPrime(number) {
+        if (number < 2) {
+            return false;
+        } else {
+            for (let i = 2; i <= Math.sqrt(number); i++) {
+                if (number % i == 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+    }
+
+    let i = 2;
+    let count = 0;
+    let displayPrime = "";
+    while (i < 10000) {
+        if (isPrime(i)){
+            count+=1;
+            displayPrime += count+": "+i + "<br>";
+        }
+            i++;
+    }
+
+    document.getElementById("display").innerHTML = displayPrime;
+</script>
+</body>
+</html>

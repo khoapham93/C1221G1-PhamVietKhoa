@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let myArray = ["a","eb","a","bb","dd","oo","c","bb","bb","c"];
+    let str = "a";
+    let result = checkIncludeInArray(myArray,str);
+    if (result!=-1){
+        alert("Số lần xuất hiện của ký tự "+str+ " Trong mảng là: "+result);
+    }else {
+        alert("Ký tự "+str+ " không có trong mảng");
+    }
+
+    function checkIncludeInArray(arr, character) {
+        count = 0;
+        if (arr.includes(character)){
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i]==character){
+                    count++;
+                }
+            }
+        }else {
+            return -1;
+        }
+
+        return count;
+    }
+
+</script>
+</body>
+</html>

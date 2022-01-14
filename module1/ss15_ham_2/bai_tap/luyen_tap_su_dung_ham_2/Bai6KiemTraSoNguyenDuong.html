@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num = 5;
+    let check = kiemTraNguyenDuong(num);
+    if(check){
+        alert("Số nguyên dương");
+    }
+    else {
+        alert("không phải Số nguyên dương");
+    }
+    function kiemTraNguyenDuong(number) {
+
+        return (parseInt(number) == number) && (number > 0);
+
+    }
+
+</script>
+</body>
+</html>

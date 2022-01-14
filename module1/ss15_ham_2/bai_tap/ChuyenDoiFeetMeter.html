@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+
+    <input id="inputText" placeholder="Nhap vao gia tri">
+    <input id="outputText">
+    <select id="nhietDo">
+        <option value="FeetToMeter"> Feet To Meter</option>
+        <option value="MeterToFeet"> Meter To Feet</option>
+    </select>
+    <button type="button" name="Convert" onclick="convertTemperature()">Convert</button>
+</form>
+<script>
+    function convertTemperature() {
+        let inputValue = parseFloat(document.getElementById("inputText").value);
+        let needConvert = document.getElementById("nhietDo").value;
+        let outputValue;
+        if(needConvert=="FeetToMeter"){
+            outputValue = footToMeter(inputValue);
+        }else {
+            outputValue = meterToFoot(inputValue);
+        }
+        document.getElementById("outputText").value = outputValue;
+    }
+    
+    function footToMeter(foot) {
+        meter = 0.305 * foot;
+        return meter;
+    }
+
+    function meterToFoot(meter){
+        foot = 3.279 * meter;
+        return foot;
+    }
+
+</script>
+</body>
+</html>

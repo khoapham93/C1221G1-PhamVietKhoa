@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrStar = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let arrConstellation = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major" , "Leo"];
+    
+    function findStar(star) {
+
+        if (arrStar.includes(star)){
+            alert("The "+ star+" belong "+arrConstellation[arrStar.indexOf(star)]);
+        }else {
+            alert("Cannot find constellation!");
+        }
+    }
+
+    let inputStar = prompt("Type a Star's name: ");
+
+    findStar(inputStar);
+
+</script>
+</body>
+</html>

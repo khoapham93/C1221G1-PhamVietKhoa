@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a =10;
+    let b = 5;
+    let c = -1;
+    let min = findMinNumber(a,b,c);
+
+    alert("Số nhỏ nhất là " +min);
+
+    function findMinNumber(number1, number2, number3) {
+        let min = number1;
+        if (min > number2){
+            min = number2;
+        }
+        if (min>number3){
+            min = number3;
+        }
+        return min;
+    }
+</script>
+</body>
+</html>

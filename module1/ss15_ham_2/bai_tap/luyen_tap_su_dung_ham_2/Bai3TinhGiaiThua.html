@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num = prompt("Nhập vào số cần tính giai thừa");
+
+    let giaithua = tinhGiaiThua(num);
+
+    if (giaithua != -1){
+        alert("Giai thừa của " +num+ " là " +giaithua );
+    } else {
+        alert("Cần Nhập số nguyên lớn hơn hoặc bằng không");
+    }
+
+    function tinhGiaiThua(number) {
+        let factorial = 1;
+
+        if ((parseInt(number) ==number) && (number >=0)){
+            number = parseInt(number);
+
+            if (number == 0){
+                // do nothing
+            }else {
+                for (let i = 2; i <=number ; i++) {
+                    factorial = factorial *i;
+                }
+            }
+        }else {
+            return -1;
+        }
+        return factorial;
+    }
+
+</script>
+</body>
+</html>
