@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        tr:nth-child(even){
+            background-color: #dddddd;
+        }
+
+        td {
+            height: 40px;
+            width: 200px;
+            text-align: left;
+        }
+
+        input[type = "text"] {
+            height: 20px;
+            width: 250px;
+
+        }
+
+        input[type = "button"] {
+            border: none;
+            height: 30px;
+            width: 80px;
+            border-radius: 5px;
+            color: white;
+            background: forestgreen;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <h3> Add New Product</h3>
+    <input type="text" id="addProduct" placeholder="New Product">
+    <input type="button" name="change" id="changeValue" value="Add" onclick="changeProduct()">
+</form>
+<h3> Display All Product</h3>
+
+<h4> Product Name</h4>
+
+<div id="display"></div>
+
+</body>
+<script>
+    let arrProduct = ["iphone 6", "iphone 7", "samsung Galaxy Note 20 Ultra"]; //Sample product
+    let editing = false;
+    let idEditing = 0;
+    hienThi();
+
+    function hienThi() {
+        let tableString = "<table>";
+
+        for (let i = 0; i < arrProduct.length; i++) {
+            tableString += "<tr>";
+
+            tableString += '<td>' + arrProduct[i] + '</td>';
+            tableString += '<td> <input type="button"  value = "edit" onclick="editProduct('+i+')"></td>';
+            tableString += '<td> <input type="button" value = "delete" onclick="deleteProduct('+i+')"></td>';
+            tableString += "</tr>";
+        }
+
+        tableString += "</table>";
+        document.getElementById("display").innerHTML = tableString;
+
+    }
+
+    function changeProduct() {
+
+        if (editing){
+
+            arrProduct[idEditing] = document.getElementById("addProduct").value;
+            document.getElementById("addProduct").value = "";
+            hienThi();
+
+            //setting default
+            editing = false;
+            idEditing = 0;
+            document.getElementById("changeValue").value = "Add";
+        }else {
+
+            //add product
+            let newProduct = document.getElementById("addProduct").value;
+            document.getElementById("addProduct").value = "";
+            arrProduct.push(newProduct);
+            hienThi();
+        }
+
+    }
+    
+    function editProduct(id) {
+
+        document.getElementById("changeValue").value = "edit";
+        document.getElementById("addProduct").value = arrProduct[id];
+
+        idEditing = id;
+        editing = true;
+
+    }
+
+
+    function deleteProduct(id) {
+        arrProduct.splice(id,1);
+        hienThi();
+    }
+
+</script>
+</html>
