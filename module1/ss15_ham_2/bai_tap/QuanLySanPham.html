@@ -71,23 +71,35 @@
 
     function changeProduct() {
 
+        let newProduct = document.getElementById("addProduct").value;
+
         if (editing){
 
-            arrProduct[idEditing] = document.getElementById("addProduct").value;
-            document.getElementById("addProduct").value = "";
-            hienThi();
+            if (newProduct!=""){
+                arrProduct[idEditing] = newProduct;
+                document.getElementById("addProduct").value = "";
+                hienThi();
 
-            //setting default
-            editing = false;
-            idEditing = 0;
-            document.getElementById("changeValue").value = "Add";
+                //setting default
+                editing = false;
+                idEditing = 0;
+                document.getElementById("changeValue").value = "Add";
+            }else {
+                alert("Cần nhập tên Sản Phẩm");
+            }
+
         }else {
 
             //add product
             let newProduct = document.getElementById("addProduct").value;
-            document.getElementById("addProduct").value = "";
-            arrProduct.push(newProduct);
-            hienThi();
+            if (newProduct!=""){
+                document.getElementById("addProduct").value = "";
+                arrProduct.push(newProduct);
+                hienThi();
+            }else {
+                alert("Cần nhập tên Sản Phẩm");
+            }
+
         }
 
     }
@@ -104,8 +116,12 @@
 
 
     function deleteProduct(id) {
-        arrProduct.splice(id,1);
-        hienThi();
+        let conf= confirm("Bạn có muốn xóa sản phẩm "+arrProduct[id]);
+        if (conf){
+            arrProduct.splice(id,1);
+            hienThi();
+        }
+
     }
 
 </script>
