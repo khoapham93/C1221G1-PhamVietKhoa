@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrA = [1, 2, 3,9,7,5,4,3,8];
+    let arrB = [];
+
+    arrB[0] = arrA[0];
+
+    for (let i = 1; i <arrA.length ; i++) {
+        arrB[i] = arrA[i]+arrB[i-1];
+    }
+    document.write("Mảng ban đầu là: "+arrA);
+    document.write("<br>");
+    document.write("Mảng Cộng dồn là: "+arrB);
+
+</script>
+</body>
+</html>

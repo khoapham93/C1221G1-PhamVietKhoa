@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let luong = prompt("Nhập vào lương nhân viên (đv: triệu đồng):");
+
+    luong = parseFloat(luong);
+
+    let thueTNCN =0;
+    let luongThucNhan= 0;
+
+    if (luong>=15){
+        thueTNCN = 0.2*luong;
+    } else if (luong >= 7) {
+        thueTNCN = 0.1*luong;
+    }else {
+        thueTNCN = 0.05*luong;
+
+    }
+
+    luongThucNhan = luong - thueTNCN;
+
+document.write("Thuế thu nhập cá nhân phải nộp là: "+thueTNCN);
+document.write("<br>");
+document.write("lương thực nhận sau khi trừ thuế: "+luongThucNhan);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrA = [7, 2, 5, 3, 5, 3];
+    let arrB = [7, 2, 9, 4, 6, 3, 5, 4];
+    let arrC = [];
+
+    for (let i = 0; i < arrB.length; i++) {
+        for (let j = 0; j < arrA.length; j++) {
+            if (!arrA.includes(arrB[j]) && !arrC.includes(arrB[j])) {
+                arrC.push(arrB[j]);
+            }
+        }
+    }
+    arrC.sort(function (a, b) {
+        return a - b;
+    });
+
+    document.write("Mảng A là: " + arrA);
+    document.write("<br>");
+    document.write("Mảng B là: " + arrB);
+    document.write("<br>");
+    document.write("Mảng C chứa các phần tử ở mảng B nhưng không ở mảng A là: " + arrC);
+
+</script>
+</body>
+</html>
