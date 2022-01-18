@@ -40,7 +40,9 @@
             this.year = year;
 
         }
-
+        this.toString1 = function () {
+            return this.day +"/"+ this.month +"/"+ this.year;
+        }
 
     };
 
@@ -65,7 +67,7 @@
 
     date.setDate(18,1,2022);
 
-    alert(date.toString());
+    alert(date.toString1());
 </script>
 </body>
 </html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="500px" height="400px" style="border:1px solid #d3d3d3;"></canvas>
+<p id ="display"></p>
+<script>
+    class Rectangle {
+        constructor(chieuDai, chieuRong) {
+            this.chieuDai = chieuDai;
+            this.chieuRong = chieuRong;
+        }
+
+        getDienTich() {
+            return this.chieuDai * this.chieuRong;
+        }
+
+        getChuVi() {
+            return (this.chieuDai + this.chieuRong) * 2;
+        }
+
+        setChieuDai(chieuDai) {
+            this.chieuDai = chieuDai;
+        }
+
+        setChieuRong(chieuRong) {
+            this.chieuRong = chieuRong;
+        }
+
+        drawOnCanvas() {
+
+            let rec = document.getElementById("myCanvas").getContext("2d");
+            rec.beginPath();
+            rec.rect(10, 10, this.chieuDai, this.chieuRong);
+            rec.stroke();
+        }
+    }
+
+    let displayText = "";
+
+    let smallRectangle = new Rectangle(300, 100);
+    smallRectangle.drawOnCanvas();
+
+    smallRectangle.setChieuDai(400);
+    smallRectangle.setChieuRong(150);
+
+    displayText += "Diện tích hình chữ nhật là: "+smallRectangle.getDienTich();
+    displayText += "<br>";
+    displayText += "Chu vi hình chữ nhật là: "+smallRectangle.getChuVi();
+
+    document.getElementById("display").innerHTML = displayText;
+</script>
+</body>
+</html>
