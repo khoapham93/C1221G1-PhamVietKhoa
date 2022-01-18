@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number;
+    let checking;
+    let arrNum;
+    let numToString = "";
+
+    do {
+        number = prompt("nhập vào một số:");
+        checking = (parseFloat(number) == number);
+    } while (!checking);
+
+    arrNum = number.split("");
+
+    for (let i = 0; i <arrNum.length ; i++) {
+       switch (arrNum[i]) {
+           case "-":
+               numToString += "âm ";
+               break;
+           case ".":
+               numToString += "chấm ";
+               break;
+            case "0":
+                numToString += "không ";
+                break;
+           case "1":
+               numToString += "một ";
+               break;
+           case "2":
+               numToString += "hai ";
+               break;
+           case "3":
+               numToString += "ba ";
+               break;
+           case "4":
+               numToString += "bốn ";
+               break;
+           case "5":
+               numToString += "năm ";
+               break;
+           case "6":
+               numToString += "sáu ";
+               break;
+           case "7":
+               numToString += "bảy ";
+               break;
+           case "8":
+               numToString += "tám ";
+               break;
+           case "9":
+               numToString += "chín ";
+               break;
+       }
+    }
+
+    alert("Dãy số sau khi chuyển thành chữ là: "+numToString);
+</script>
+</body>
+</html>
