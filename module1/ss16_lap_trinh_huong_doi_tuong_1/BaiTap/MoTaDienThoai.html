@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Mobile {
+
+        constructor() {
+            this.battery = 100;
+            this.status = true // power is on
+            this.message = "";
+            this.sentMessage = [];
+            this.inboxMessage = [];
+        }
+
+        getStatus() {
+            return this.status;
+        }
+
+        turnOnOff() {
+            this.status = !this.status;
+        }
+
+        charging(){
+            if (this.battery < 10){
+                this.battery = 100;
+            }
+        }
+
+        writeMessage(message){
+
+            if (this.status && (this.battery > 5)){
+                this.message = message;
+                this.battery--;
+            }else {
+                alert("điện thoại chưa bật hoặc pin đang yếu");
+            }
+        }
+
+        receiveMessage(message){
+            if (this.status && (this.battery > 5)){
+                this.inboxMessage.push(message);
+                this.battery--;
+            }else {
+                alert("điện thoại chưa bật hoặc pin đang yếu");
+            }
+        }
+
+        sendMessage(phone,message){
+
+            if (this.status && (this.battery > 5)){
+                this.writeMessage(message);
+
+                this.sentMessage.push(this.message);
+                this.message = "";
+                phone.receiveMessage(this.sentMessage[this.sentMessage.length-1]);
+
+                this.battery--;
+            }else {
+                alert("điện thoại chưa bật hoặc pin đang yếu");
+            }
+
+        }
+
+        displayInboxMessage(){
+            if (this.status && (this.battery > 5)){
+                for (let i = 0; i < this.inboxMessage.length; i++) {
+                    document.write(i+"."+this.inboxMessage[i]);
+                    document.write("<br>");
+                }
+                this.battery--;
+            }else {
+                alert("điện thoại chưa bật hoặc pin đang yếu");
+            }
+
+        }
+
+        displaySentMessage(){
+            if (this.status && (this.battery > 5)){
+                for (let i = 0; i < this.sentMessage.length; i++) {
+                    document.write(i+"."+this.sentMessage[i]);
+                    document.write("<br>");
+                }
+                this.battery--;
+            }else {
+                alert("điện thoại chưa bật hoặc pin đang yếu");
+            }
+
+        }
+    }
+
+    let iphone = new  Mobile();
+    let nokia = new  Mobile();
+
+    iphone.sendMessage(nokia,"hello");
+    nokia.displayInboxMessage();
+    nokia.sendMessage(iphone,"toi da nhan duoc tin nhan");
+    iphone.displayInboxMessage();
+
+</script>
+</body>
+</html>
