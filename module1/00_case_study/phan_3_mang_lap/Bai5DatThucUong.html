@@ -3,71 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <style>
-        body {
-            font-family: 'Open Sans', sans-serif;
-            font-size: 18px;
-        }
-
-        label {
-            margin-top: 10px;
-        }
-
-        input[type = number] {
-            border-radius: 5px;
-            border: 1px solid black;
-            width: 100%;
-            height: 40px;
-            text-align: right;
-            margin-bottom: 10px;
-
-        }
-
-        .container {
-            border-radius: 5px;
-            background: palegreen;
-            height: 500px;
-            width: 350px;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 20px 20px 20px 20px;
-        }
-
-        input[type = button] {
-            height: 50px;
-            width: 100px;
-            margin-bottom: 5px;
-        }
-    </style>
 </head>
 <body>
-<div class="container">
-    <h3> Menu đồ uống</h3>
-    <div id="displayMenu"></div>
-</div>
 
 <script>
-    let menu = ["Cafe", "Cam vắt", "Nước ép cà rốt", "Nước ép cà chua", "Nước lọc,Nước dừa"];
-    let price = []
+    let menu = ["Cafe", "Cam vắt", "Nước ép cà rốt", "Nước ép cà chua", "Nước lọc","Nước dừa","Thoát"];
+    let price = [10,20,30,40,20,25];
+    let choosenDrink = [];
+    let amountChoosen = [];
+    let total = 0;
+    let list = "";
+    let result = "Danh sách đồ uống đã chọn:";
 
-    let i = 0;
-    let str = '<table>';
-    do {
-        str += '<tr>';
-        str += '<td>' + (i + 1) + '</td>';
-        str += '<td onclick="dosomething(' + i + ')">' + menu[i] + '</td>';
-        str += '</tr>';
-        i++;
-    } while (i < menu.length);
-
-    str = '</table>';
-
-    document.getElementById("displayMenu").innerHTML = str;
-
-
-    function dosomething() {
-
+    for (let i = 0; i <menu.length ; i++) {
+        list += "\n"+(i+1)+"."+menu[i];
     }
+
+    do{
+        let choose = parseInt(prompt(list));
+        if (choose==menu.length){
+            break;
+        }
+        choosenDrink.push(menu[choose-1]);
+        let amount = parseInt(prompt("Nhập só lượng cho "+menu[choose-1]+ " Đơn giá: "+price[choose-1])+ " nghìn đồng");
+        amountChoosen.push(amount);
+        total += amount*price[choose-1];
+
+    }while (true);
+
+    for (let i = 0; i <choosenDrink.length ; i++) {
+        result += "\n"+choosenDrink[i]+" số lượng: "+amountChoosen[i];
+    }
+    result += "\nTổng tiền hóa đơn là: "+total+ " nghìn đồng";
+
+    alert(result);
+
 </script>
 </body>
 </html>
