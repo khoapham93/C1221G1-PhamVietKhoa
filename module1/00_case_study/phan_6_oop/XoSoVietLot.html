@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input[type = "text"] {
+            height: 20px;
+            width: 50px;
+            border-radius: 5px;
+
+            margin: 5px 5px 5px 5px;
+        }
+
+        input[type = "button"] {
+            height: 30px;
+            width: 150px;
+            border-radius: 5px;
+            margin: 5px 5px 5px 5px;
+        }
+
+        input[type = "button"]:hover {
+            background-color: darkgray;
+        }
+    </style>
+</head>
+<body>
+<h2> Xổ Số CodeGym</h2>
+<div id="display"></div>
+
+<script>
+    class VeSo {
+        constructor(first, second, third, fourth, fifth, sixth) {
+            this.first = first;
+            this.second = second;
+            this.third = third;
+            this.fourth = fourth;
+            this.fifth = fifth;
+            this.sixth = sixth;
+        }
+
+        getFirst() {
+            return this.first;
+        }
+
+        setFirst(value) {
+            this.first = value;
+        }
+
+        getSecond() {
+            return this.second;
+        }
+
+        setSecond(value) {
+            this.second = value;
+        }
+
+        getThird() {
+            return this.third;
+        }
+
+        setThird(value) {
+            this.third = value;
+        }
+
+        getFourth() {
+            return this.fourth;
+        }
+
+        setFourth(value) {
+            this.fourth = value;
+        }
+
+        getFifth() {
+            return this.fifth;
+        }
+
+        setFifth(value) {
+            this.fifth = value;
+        }
+
+        getSixth() {
+            return this.sixth;
+        }
+
+        setSixth(value) {
+            this.sixth = value;
+        }
+
+        toString() {
+            return this.getFirst() + " " + this.getSecond() + " " + this.getThird() + " " + this.getFourth() + " " + this.getFifth() + " " + this.getSixth();
+        }
+    }
+
+    let veTrung = new VeSo("01", "52", "65", "84", "89", "54");
+
+    let listVeSo = [];
+    display(listVeSo);
+
+    function display(danhSach) {
+
+        let formString = "<form>";
+        for (let i = 0; i < danhSach.length; i++) {
+            formString += '<input type="text" value="' + danhSach[i].getFirst() + '">';
+            formString += '<input type="text" value="' + danhSach[i].getSecond() + '">';
+            formString += '<input type="text" value="' + danhSach[i].getThird() + '">';
+            formString += '<input type="text" value="' + danhSach[i].getFourth() + '">';
+            formString += '<input type="text" value="' + danhSach[i].getFifth() + '">';
+            formString += '<input type="text" value="' + danhSach[i].getSixth() + '">';
+            formString += '<br>';
+        }
+
+        formString += '<input type="button" name="buy" id = "buy" value="Mua vé số" onclick="buyTicket()">';
+        formString += '<input type="button" name="showResult" id = "showResult" value="Xem kết quả" onclick="result()">';
+
+        formString += '</form>';
+
+        document.getElementById("display").innerHTML = formString;
+
+    }
+
+
+    function buyTicket() {
+        if (listVeSo.length >= 4) {
+            alert("Bạn đã mua đủ số vé quy định. Hãy nhấn xem kết quả.");
+        } else {
+            let luaChon = chonVeSo();
+
+            if (luaChon == 1) {      //tự chọn số
+
+                let veSoChon = tuChonVeSo();
+                let newTicket = new VeSo(veSoChon[0], veSoChon[1], veSoChon[2], veSoChon[3], veSoChon[4], veSoChon[5]);
+                listVeSo.push(newTicket);
+            } else {                 //radom
+
+                let veSoChon = systemRandom();
+                let newTicket = new VeSo(veSoChon[0], veSoChon[1], veSoChon[2], veSoChon[3], veSoChon[4], veSoChon[5]);
+
+                listVeSo.push(newTicket);
+            }
+
+            display(listVeSo);
+        }
+    }
+
+    function result() {
+        if (listVeSo.length<1){
+            alert("Mời bạn mua vé");
+        }else {
+            codingsfasfasf
+
+
+
+
+
+        }
+    }
+
+    function chonVeSo() {
+        let check;
+        let choose;
+        do {
+            choose = prompt("Bạn có 2 lựa chọn:\n 1. Bạn muốn tự chọn số.\n 2.Hệ thống tự chọn số");
+            check = parseInt(choose) == choose && choose > 0 && choose <= 2;
+        } while (!check);
+
+        return parseInt(choose);
+    }
+
+    function tuChonVeSo() {
+        let arr = [];
+        let i = 1;
+        do {
+            let nhap = prompt("Nhập số thứ " + i + " của vé (0-99):");
+
+            if (parseInt(nhap) == nhap && nhap > 0 && nhap <= 99) {
+                arr.push(('0' + nhap).slice(-2));
+                i++;
+            } else {
+                alert("Vui lòng nhập đúng định dạng");
+            }
+        } while (i < 7);
+        alert("vé Của bạn là: "+ arr);
+        return arr;
+    }
+
+    function systemRandom() {
+        let arr = [];
+        let i = 1;
+        do {
+            let nhap = Math.floor(Math.random() * (99 + 1));
+
+            //('0' + deg).slice(-2) thêm số 0 vào trước.
+            arr.push(('0' + nhap).slice(-2));
+            i++;
+        } while (i < 7);
+        alert("vé Của bạn là: "+ arr);
+        return arr;
+    }
+</script>
+</body>
+</html>
