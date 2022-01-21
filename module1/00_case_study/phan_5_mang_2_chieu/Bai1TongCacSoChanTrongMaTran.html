@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let hang;
+    let cot;
+    let checking;
+    do {
+        hang = prompt("nhâp vào số hàng của mảng hai chiều");
+        cot = prompt("nhâp vào số cột của mảng hai chiều");
+        checking = (parseInt(hang)==hang)&& hang>0 && (parseInt(cot)==cot)&& cot>0;
+    }while (!checking);
+
+    hang = parseInt(hang);
+    cot = parseInt(cot);
+
+    let arr = new Array(hang);
+    let sum = 0;
+    document.write("Mảng Nhập vào là: ")
+    document.write("<br>");
+
+    for (let i = 0; i <hang ; i++) {
+        arr[i] = new Array(cot);
+        for (let j = 0; j < cot; j++) {
+            arr[i][j] = parseInt(prompt("nhập phần tử hàng : " + i+" vị trí: "+j));
+            document.write(arr[i][j]);
+            document.write("&nbsp;")
+        }
+        document.write("<br>");
+    }
+
+//tách ra riêng cho dễ nhìn
+
+    for (let i = 0; i <hang ; i++) {
+        for (let j = 0; j < cot; j++) {
+
+            if(arr[i][j] %2 === 0){
+                sum += arr[i][j];
+            }
+        }
+    }
+    document.write("<br>");
+    document.write("Tổng số chẵn trong ma trận là: "+sum);
+
+
+</script>
+</body>
+</html>

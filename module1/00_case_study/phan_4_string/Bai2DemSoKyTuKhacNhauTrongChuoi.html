@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = prompt("Nhập vào một chuỗi");
+    str = str.replace(/\s+/g,' ').trim();
+
+    demSoKyTu(str);
+
+    function demSoKyTu(string) {
+        let arr = [];
+        for (let i = 0; i < string.length; i++) {
+
+            if (string[i]!= " " && !arr.includes(string[i])){
+                arr.push(string[i]);
+            }
+        }
+
+        document.write("Chuỗi nhập vào: "+string);
+        document.write("<br>");
+        document.write("Số lượng ký tự không giống nhau trong chuỗi (không tính dấu cách) là: "+arr.length);
+        document.write("<br>");
+        document.write("ký tự không giống nhau là: "+arr);
+    }
+
+</script>
+</body>
+</html>

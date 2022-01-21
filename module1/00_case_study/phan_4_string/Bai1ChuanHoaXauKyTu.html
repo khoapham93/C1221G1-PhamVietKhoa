@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let inputString = prompt("Nhập vào một chuỗi ký tự");
+    let result = "";
+    chuanHoa(inputString);
+    findMaxLength(result);
+
+    function chuanHoa(str) {
+
+        document.write("Chuỗi nhập vào: "+str);
+        document.write("<br>");
+
+        str = str.replace(/\s+/g,' ').trim();
+        result = str[0].toUpperCase();
+
+        for (let i =1; i <str.length; i++){
+           if(str[i-1]== " "){
+               result += str[i].toUpperCase();
+           }else {
+               result += str[i].toLowerCase();
+           }
+        }
+        document.write("Chuỗi sau khi chuẩn hóa: "+result);
+    }
+    function findMaxLength(str) {
+        let arrString = str.split(" ");
+
+        let max = 0;
+        let count = 0;
+        for (let i = 0; i < arrString.length; i++) {
+            if (max < arrString[i].length){
+                max = arrString[i].length;
+                count = i;
+            }
+        }
+        document.write("<br>");
+        document.write("Từ dài nhất trong chuỗi nhập vào là: "+arrString[count]);
+
+    }
+</script>
+</body>
+</html>

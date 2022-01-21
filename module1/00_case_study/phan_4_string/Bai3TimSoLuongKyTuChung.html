@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str1 = "aabcc";
+    let str2 = "adcaa";
+
+    commonCharacterCount(str1,str2);
+
+    function commonCharacterCount(s1,s2) {
+
+        let arr = [];
+        let str1j ="";
+
+        for (let i = 0; i <s1.length; i++) {
+
+            if ((s2.includes(s1[i]))&& (!arr.includes(s1[i]))){
+                arr.push(s1[i]);
+                str1j +=s1[i];
+
+                for (let j = i+1; j < s1.length; j++) {
+                    str1j +=s1[j];
+                    if ((s2.includes(str1j)) && (!arr.includes(str1j)) ){
+                        arr.push(str1j);
+                    }else {
+                        str1j = "";
+                        break;
+                    }
+                }
+            }
+        }
+        document.write("Chuỗi thứ nhất: "+s1);
+        document.write("<br>");
+
+        document.write("Chuỗi thứ nhất: "+s2);
+        document.write("<br>");
+        document.write("Số ký chung giữa 2 chuỗi là "+arr.length+ ", ký tự chung: "+arr);
+    }
+
+</script>
+</body>
+</html>

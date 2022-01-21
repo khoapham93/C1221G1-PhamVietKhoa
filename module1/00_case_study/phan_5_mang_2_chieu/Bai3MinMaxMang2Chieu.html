@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [
+        [5, 12, 17, 9, 3],
+        [13, 4, 8, 14, 1],
+        [9, 6, 3, 7, 21]
+    ];
+    let min = arr[0][0];
+    let max = arr[0][0];
+
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[i].length; j++) {
+            if (max < arr[i][j]) {
+                max = arr[i][j];
+            }
+            if (min > arr[i][j]) {
+                min = arr[i][j];
+            }
+        }
+    }
+    document.write("Số lớn nhất trong mảng: "+max);
+    document.write("<br>")
+    document.write("Số nhỏ nhất trong mảng: "+min);
+</script>
+</body>
+</html>

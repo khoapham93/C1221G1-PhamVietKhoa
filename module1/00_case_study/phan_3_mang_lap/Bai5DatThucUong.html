@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18px;
+        }
+
+        label {
+            margin-top: 10px;
+        }
+
+        input[type = number] {
+            border-radius: 5px;
+            border: 1px solid black;
+            width: 100%;
+            height: 40px;
+            text-align: right;
+            margin-bottom: 10px;
+
+        }
+
+        .container {
+            border-radius: 5px;
+            background: palegreen;
+            height: 500px;
+            width: 350px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 20px 20px 20px 20px;
+        }
+
+        input[type = button] {
+            height: 50px;
+            width: 100px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h3> Menu đồ uống</h3>
+    <div id="displayMenu"></div>
+</div>
+
+<script>
+    let menu = ["Cafe", "Cam vắt", "Nước ép cà rốt", "Nước ép cà chua", "Nước lọc,Nước dừa"];
+    let price = []
+
+    let i = 0;
+    let str = '<table>';
+    do {
+        str += '<tr>';
+        str += '<td>' + (i + 1) + '</td>';
+        str += '<td onclick="dosomething(' + i + ')">' + menu[i] + '</td>';
+        str += '</tr>';
+        i++;
+    } while (i < menu.length);
+
+    str = '</table>';
+
+    document.getElementById("displayMenu").innerHTML = str;
+
+
+    function dosomething() {
+
+    }
+</script>
+</body>
+</html>
