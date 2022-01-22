@@ -35,9 +35,40 @@
     // }
     //
     // alert(gradingStudents(37));
-    let a ="9";
-    let b = ('0' + a).slice(-2);
-    alert(b);
+    let veTrung = ["01", "52", "65", "84", "89", "54"];
+    let veDo = ["03", "54", "66", "84", "89", "54"];
+
+    let a = doVeTrung(veDo,veTrung);
+
+    function doVeTrung(veDo, veTrung) {
+
+        let giaiKuyenKhich = veDo.getSixth() == veTrung[5] && veDo.getFifth() == veTrung[4] && veDo.getFourth() == veTrung[3];
+
+        if (giaiKuyenKhich) {
+
+            //giải khuyến khích
+            let giaiNhi = veDo.getThird() == veTrung[2] && veDo.getSecond() == veTrung[1];
+
+            if (giaiNhi) {
+
+                //giai nhi
+                let giaiNhat = veDo.getFirst() == veTrung[0];
+
+                if (giaiNhat) {
+                    return 1;
+                } else {
+                    return 2; //Giải nhì
+                }
+
+            } else {
+                return 3; // giải KK
+            }
+
+        } else {
+            return false; // không trúng
+        }
+
+    }
 </script>
 </body>
 </html>

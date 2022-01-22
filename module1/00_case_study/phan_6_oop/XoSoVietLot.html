@@ -92,9 +92,12 @@
         }
     }
 
-    let veTrung = new VeSo("01", "52", "65", "84", "89", "54");
+    let veTrung = ["01", "52", "65", "84", "89", "54"];
+    let giaiThuong = [100, 20, 1];
+    let veSo1 = new VeSo("01", "52", "65", "84", "89", "54");
+    let veSo2 = new VeSo("01", "54", "65", "84", "89", "54");
 
-    let listVeSo = [];
+    let listVeSo = [veSo1, veSo2];
     display(listVeSo);
 
     function display(danhSach) {
@@ -118,8 +121,7 @@
         document.getElementById("display").innerHTML = formString;
 
     }
-
-
+    
     function buyTicket() {
         if (listVeSo.length >= 4) {
             alert("Bạn đã mua đủ số vé quy định. Hãy nhấn xem kết quả.");
@@ -144,15 +146,55 @@
     }
 
     function result() {
-        if (listVeSo.length<1){
+        if (listVeSo.length < 1) {
             alert("Mời bạn mua vé");
-        }else {
-            codingsfasfasf
+        } else {
+            //kiểm tra trúng bao nhiêu giải
+            let giaiNhat = 0;
+            let giaiNhi = 0;
+            let giaiKhuyenKhich = 0;
+            let khongTrung = 0;
 
+            let checking;
+            for (let i = 0; i < listVeSo.length; i++) {
+                checking = doVeTrung(listVeSo[i], veTrung);
+                if (checking == 3) {
+                    giaiKhuyenKhich += 1;
+                } else if (checking == 2) {
+                    giaiNhi += 1;
+                } else if (checking == 1) {
+                    giaiNhat += 1;
+                } else {
+                    khongTrung += 1;
+                }
+            }
 
+            if (khongTrung == 4) {
+                alert("Chúc bạn may mắn lần sau!");
+            } else {
 
+                let total = giaiNhat * giaiThuong[0] + giaiNhi * giaiThuong[1] + giaiKhuyenKhich * giaiThuong[2];
 
+                let display = "Vé trúng của chương trình là: " + veTrung.join(" ") +
+                    "\nCơ Cấu giải:" +
+                    "\n1. Nhất: " + giaiThuong[0] + " Triệu"
+                    + "\n2. Nhì: " + giaiThuong[1] + " Triệu"
+                    + "\n3. KK: " + giaiThuong[2] + " Triệu"
+                    + "\nChúc mừng bạn đã trúng: ";
 
+                if (giaiNhat != 0) {
+                    display += giaiNhat + " Giải Nhất";
+                }
+                if (giaiNhi != 0) {
+                    display += ", " + giaiNhi + " Giải Nhì";
+                }
+                if (giaiKhuyenKhich != 0) {
+                    display += ", " + giaiKhuyenKhich + " Giải Khuyến Khích.";
+                }
+
+                display += "\nTổng Giải thưởng là: " + total + " Triệu đồng";
+                alert(display);
+            }
         }
     }
 
@@ -180,7 +222,7 @@
                 alert("Vui lòng nhập đúng định dạng");
             }
         } while (i < 7);
-        alert("vé Của bạn là: "+ arr);
+        alert("vé Của bạn là: " + arr);
         return arr;
     }
 
@@ -194,8 +236,37 @@
             arr.push(('0' + nhap).slice(-2));
             i++;
         } while (i < 7);
-        alert("vé Của bạn là: "+ arr);
+        alert("vé Của bạn là: " + arr);
         return arr;
+    }
+
+    function doVeTrung(veDo, veTrung) {
+
+        let giaiKuyenKhich = veDo.getSixth() == veTrung[5] && veDo.getFifth() == veTrung[4] && veDo.getFourth() == veTrung[3];
+
+        if (giaiKuyenKhich) {
+
+            //giải khuyến khích
+            let giaiNhi = veDo.getThird() == veTrung[2] && veDo.getSecond() == veTrung[1];
+
+            if (giaiNhi) {
+                //giai nhi
+                let giaiNhat = veDo.getFirst() == veTrung[0];
+
+                if (giaiNhat) {
+                    return 1;
+                } else {
+                    return 2; //Giải nhì
+                }
+
+            } else {
+                return 3; // giải KK
+            }
+
+        } else {
+            return false; // không trúng
+        }
+
     }
 </script>
 </body>
