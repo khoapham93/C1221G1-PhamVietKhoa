@@ -11,17 +11,17 @@
 
     function maxFraction(numerators, denominators) {
         let max = 0;
-        let count = 0;
+        let index = 0;
         for (let i = 0; i < numerators.length; i++) {
 
             if (denominators[i] != 0) {
                 if (max < (numerators[i] / denominators[i])) {
                     max = numerators[i] / denominators[i];
-                    count = i;
+                    index = i;
                 }
             }
         }
-        return count;
+        return index;
     }
 
     let b = maxFraction(arrA, arrB);

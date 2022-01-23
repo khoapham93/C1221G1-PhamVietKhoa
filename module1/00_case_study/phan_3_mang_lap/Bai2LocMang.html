@@ -11,10 +11,9 @@
     let arrC = [];
 
     for (let i = 0; i < arrB.length; i++) {
-        for (let j = 0; j < arrA.length; j++) {
-            if (!arrA.includes(arrB[j]) && !arrC.includes(arrB[j])) {
-                arrC.push(arrB[j]);
-            }
+
+            if (!arrA.includes(arrB[i]) && !arrC.includes(arrB[i])) {
+                arrC.push(arrB[i]);
         }
     }
     arrC.sort(function (a, b) {
