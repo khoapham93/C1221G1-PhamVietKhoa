@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+        th {
+            background-color: beige;
+        }
+
+        td, th {
+            height: 40px;
+            width: 170px;
+            text-align: left;
+            padding-left: 10px;
+
+        }
+
+        input[type = "text"], input[type = "number"] {
+            height: 20px;
+            width: 200px;
+        }
+
+        input[type = "button"] {
+            border: none;
+            height: 30px;
+            width: 80px;
+            border-radius: 5px;
+            color: white;
+            background: forestgreen;
+        }
+
+        input[type = "button"]:hover {
+            background: darkgreen;
+        }
+    </style>
+
+</head>
+<body>
+<h3>Chương trình quản lý tài khoản ngân hàng</h3>
+<input type="text" id="maTaiKhoan" placeholder="Nhập mã TK">
+<input type="text" id="chuTaiKhoan" placeholder="Nhập chủ TK">
+<input type="text" id="nganHang" placeholder="Nhập Ngân hàng">
+<input type="number" id="tongTien" placeholder="Nhập tổng tiền tài khoản">
+<input type="button" id="add" onclick="addNewAccount()" value="Thêm mới"> <br><br>
+
+<div id="display"></div>
+<script>
+    class TaiKhoanNganHang {
+        constructor(maTaiKhoan, chuTaiKhoan, nganHang, tongTienTaiKhoan) {
+            this.maTaiKhoan = maTaiKhoan;
+            this.chuTaiKhoan = chuTaiKhoan;
+            this.nganHang = nganHang;
+            this.tongTienTaiKhoan = tongTienTaiKhoan;
+        }
+
+
+        getMaTaiKhoan() {
+            return this.maTaiKhoan;
+        }
+
+        setMaTaiKhoan(value) {
+            this.maTaiKhoan = value;
+        }
+
+        getChuTaiKhoan() {
+            return this.chuTaiKhoan;
+        }
+
+        setChuTaiKhoan(value) {
+            this.chuTaiKhoan = value;
+        }
+
+        getNganHang() {
+            return this.nganHang;
+        }
+
+        setNganHang(value) {
+            this.nganHang = value;
+        }
+
+        getTongTienTaiKhoan() {
+            return this.tongTienTaiKhoan;
+        }
+
+        setTongTienTaiKhoan(value) {
+            this.tongTienTaiKhoan = value;
+        }
+
+        toString() {
+            return this.getChuTaiKhoan() + " " + this.getChuTaiKhoan() + " " + this.getNganHang() + " " + this.getTongTienTaiKhoan();
+        }
+
+    }
+
+
+    let taiKhoan1 = new TaiKhoanNganHang("001", "Khoa", "BIDV", 10000);
+    let danhSachTaiKhoan = [taiKhoan1];
+
+    display(danhSachTaiKhoan);
+
+    function display(danhSach) {
+
+        let tableString = "<table>\n" +
+            "    <tr>\n" +
+            "        <th>STT</th>\n" +
+            "        <th>Mã Tài Khoản</th>\n" +
+            "        <th>Chủ Tài Khoản</th>\n" +
+            "        <th>Ngân Hàng</th>\n" +
+            "        <th> Tổng tiền tài khoản</th>\n" +
+            "    </tr>";
+
+        for (let i = 0; i < danhSach.length; i++) {
+            tableString += "<tr>";
+
+            tableString += '<td>' + (i + 1) + '</td>';
+            tableString += '<td>' + danhSach[i].getMaTaiKhoan() + '</td>';
+            tableString += '<td>' + danhSach[i].getChuTaiKhoan() + '</td>';
+            tableString += '<td>' + danhSach[i].getNganHang() + '</td>';
+            tableString += '<td>' + danhSach[i].getTongTienTaiKhoan() + '</td>';
+            tableString += "</tr>";
+        }
+
+        tableString += "</table>";
+
+        document.getElementById("display").innerHTML = tableString;
+    }
+
+    function addNewAccount() {
+        let maTK = document.getElementById("maTaiKhoan").value;
+        let chuTK = document.getElementById("chuTaiKhoan").value;
+        let nganHang = document.getElementById("nganHang").value;
+        let tongTien = document.getElementById("tongTien").value;
+
+        let checking = maTK != "" && chuTK != "" && nganHang != "" && tongTien != "";
+
+        if (checking) {
+            let taiKhoanMoi = new TaiKhoanNganHang(maTK, chuTK, nganHang, tongTien);
+            document.getElementById("maTaiKhoan").value = "";
+            document.getElementById("chuTaiKhoan").value = "";
+            document.getElementById("nganHang").value = "";
+            document.getElementById("tongTien").value = "";
+
+            danhSachTaiKhoan.push(taiKhoanMoi);
+        } else {
+            alert("các mục không được để trống");
+        }
+        display(danhSachTaiKhoan);
+    }
+</script>
+</body>
+</html>

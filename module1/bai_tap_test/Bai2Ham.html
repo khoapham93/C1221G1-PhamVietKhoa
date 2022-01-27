@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    vietTat("ObjectOriented");
+
+    function vietTat(string) {
+        string = string.replace(/\s+/g, ' ').trim();
+        let tuVietTat = "";
+
+        if (string == "") {
+            alert("Chuoi trong");
+        } else {
+            let myArray = string.split(" ");
+            if (myArray.length == 1) {
+                alert("Chuoi chi co 1 tu nen ko can viet tat");
+            } else {
+                for (let i = 0; i < myArray.length; i++) {
+                    tuVietTat += myArray[i][0].toUpperCase();
+                }
+                alert(tuVietTat);
+            }
+        }
+
+    }
+</script>
+</body>
+</html>
