@@ -10,7 +10,7 @@
     let checking;
     do {
         number = prompt("nhap vao do dai cua mang");
-        checking = (parseInt(number) == number) && number > 0;
+        checking = (parseInt(number) == number) && number > 0 && number < 50;
     } while (!checking);
     number = parseInt(number);
     let myArray = new Array(number);

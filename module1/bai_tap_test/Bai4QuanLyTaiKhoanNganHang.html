@@ -61,30 +61,39 @@
             this.nganHang = nganHang;
             this.tongTienTaiKhoan = tongTienTaiKhoan;
         }
+
         getMaTaiKhoan() {
             return this.maTaiKhoan;
         }
+
         setMaTaiKhoan(value) {
             this.maTaiKhoan = value;
         }
+
         getChuTaiKhoan() {
             return this.chuTaiKhoan;
         }
+
         setChuTaiKhoan(value) {
             this.chuTaiKhoan = value;
         }
+
         getNganHang() {
             return this.nganHang;
         }
+
         setNganHang(value) {
             this.nganHang = value;
         }
+
         getTongTienTaiKhoan() {
             return this.tongTienTaiKhoan;
         }
+
         setTongTienTaiKhoan(value) {
             this.tongTienTaiKhoan = value;
         }
+
         toString() {
             return this.getChuTaiKhoan() + " " + this.getChuTaiKhoan() + " " + this.getNganHang() + " " + this.getTongTienTaiKhoan();
         }
@@ -121,7 +130,7 @@
         let chuTK = document.getElementById("chuTaiKhoan").value;
         let nganHang = document.getElementById("nganHang").value;
         let tongTien = document.getElementById("tongTien").value;
-        let checking = maTK.length = 5 && parseInt(maTK)> 0 && chuTK != "" && nganHang != "" && tongTien != "";
+        let checking = maTK.length == 5 && parseInt(maTK) > 0 && chuTK != "" && nganHang != "" && tongTien != "";
         if (checking) {
             let taiKhoanMoi = new TaiKhoanNganHang(maTK, chuTK, nganHang, tongTien);
             document.getElementById("maTaiKhoan").value = "";
