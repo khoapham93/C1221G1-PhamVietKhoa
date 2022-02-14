@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cặp số thân thiết</title>
+</head>
+<body>
+<script>
+    function capSoThanThiet(number1, number2) {
+        let kiemTraSo1 = false;
+        let kiemTraSo2 = false;
+        let tongUocSo1 = 0;
+        let tongUocSo2 = 0;
+        //checking number1
+        for (let i = 1; i < number1; i++) {
+            if (number1 % i === 0) {
+                tongUocSo1 += i;
+            }
+        }
+        if (tongUocSo1 === number2) {
+            kiemTraSo1 = true;
+        }
+        //checking number2
+        for (let i = 1; i < number2; i++) {
+            if (number2 % i === 0) {
+                tongUocSo2 += i;
+            }
+        }
+        if (tongUocSo2 === number1) {
+            kiemTraSo2 = true;
+        }
+        return kiemTraSo1 && kiemTraSo2;
+    }
+
+    let kiemTra = capSoThanThiet(123, 456);
+    alert(kiemTra);
+</script>
+</body>
+</html>

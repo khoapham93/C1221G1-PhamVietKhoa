@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập mảng số nguyên</title>
+</head>
+<body>
+<script>
+    let number;
+    let checking;
+    do {
+        number = prompt("Nhập độ dài của mảng");
+        checking = (parseInt(number) == number) && number > 0 && number <= 50;
+    } while (!checking);
+    number = parseInt(number);
+    let myArray = new Array(number);
+    for (let i = 0; i < myArray.length; i++) {
+        myArray[i] = parseInt(prompt("Nhập vào phần tử thứ: " + i));
+    }
+    document.write("Mảng vừa nhập: " + myArray);
+    document.write("<br>");
+    let tongSoLeOViTriChan = 0;
+    let count = 0;
+    for (let i = 0; i < myArray.length;) {
+        if (myArray[i] % 2 != 0) {
+            tongSoLeOViTriChan += myArray[i];
+            count++;
+        }
+        i = i + 2;
+    }
+    document.write("Giá trị trung bình cộng các số lẻ ở vị trí chẵn: " + tongSoLeOViTriChan / count);
+</script>
+</body>
+</html>

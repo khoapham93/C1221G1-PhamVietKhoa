@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+        th {
+            background-color: beige;
+        }
+
+        td, th {
+            height: 40px;
+            width: 170px;
+            text-align: left;
+            padding-left: 10px;
+
+        }
+
+        input[type = "text"], input[type = "number"] {
+            height: 20px;
+            width: 200px;
+        }
+
+        input[type = "button"] {
+            border: none;
+            height: 30px;
+            width: 170px;
+            border-radius: 5px;
+            color: white;
+            background: forestgreen;
+        }
+
+        input[type = "button"]:hover {
+            background: darkgreen;
+        }
+    </style>
+</head>
+<body>
+<div align="center">
+    <h3>Chương trình quản lý sách</h3>
+    <div id="display"></div>
+    <br><br>
+    <input type="number" id="maSach" placeholder="Nhập mã sách">
+    <input type="text" id="tenSach" placeholder="Nhập tên Sách">
+    <input type="number" id="namXuatBan" placeholder="Nhập năm xuất bản">
+    <input type="number" id="soQuyen" placeholder="Nhập số quyển">
+    <input type="button" id="add" onclick="themSachMoi()" value="Thêm sách mới"> <br><br>
+    <input type="button" id="themSachDaCo" onclick="themSachDaCo()" value="Thêm sách đã có">
+    <input type="button" id="muonSach" onclick="muonSach()" value="Mượn sách">
+    <input type="button" id="hienThiSachNhieuNhat" onclick="hienThiSachNhieuNhat()" value="Hiển thị sách nhiều nhất"><br><br>
+</div>
+<script>
+    class QuanLySach {
+        constructor(maSoSach, tenSach, namXuatBan, soQuyen, tinhTrang) {
+            this.maSoSach = maSoSach;
+            this.tenSach = tenSach;
+            this.namXuatBan = namXuatBan;
+            this.soQuyen = soQuyen;
+            this.tinhTrang = tinhTrang;
+        }
+
+        getMaSoSach() {
+            return this.maSoSach;
+        }
+
+        setMaSoSach(value) {
+            this.maSoSach = value;
+        }
+
+        getTenSach() {
+            return this.tenSach;
+        }
+
+        setTenSach(value) {
+            this.tenSach = value;
+        }
+
+        getNamXuatBan() {
+            return this.namXuatBan;
+        }
+
+        setNamXuatBan(value) {
+            this.namXuatBan = value;
+        }
+
+        getSoQuyen() {
+            return this.soQuyen;
+        }
+
+        setSoQuyen(value) {
+            this.soQuyen = value;
+        }
+
+        getTinhTrang() {
+            return this.tinhTrang;
+        }
+
+        setTinhTrang(value) {
+            this.tinhTrang = value;
+        }
+    }
+
+    let sach1 = new QuanLySach(12345, "Chị Dậu", 1955, 5, true);
+    let listBook = [sach1];
+    display(listBook);
+
+    function display(danhSach) {
+        let tableString = "<table>\n" +
+            "    <tr>\n" +
+            "        <th>Mã Số Sách</th>\n" +
+            "        <th>Tên Sách</th>\n" +
+            "        <th>Năm xuất bản</th>\n" +
+            "        <th>Số quyển</th>\n" +
+            "        <th>Tình Trạng</th>\n" +
+            "    </tr>";
+        for (let i = 0; i < danhSach.length; i++) {
+            tableString += "<tr>";
+            tableString += '<td>' + danhSach[i].getMaSoSach() + '</td>';
+            tableString += '<td>' + danhSach[i].getTenSach() + '</td>';
+            tableString += '<td>' + danhSach[i].getNamXuatBan() + '</td>';
+            tableString += '<td>' + danhSach[i].getSoQuyen() + '</td>';
+            tableString += '<td>' + danhSach[i].getTinhTrang() + '</td>';
+            tableString += "</tr>";
+        }
+        tableString += "</table>";
+        document.getElementById("display").innerHTML = tableString;
+    }
+
+    function themSachMoi() {
+        let maSach = document.getElementById("maSach").value;
+        let tenSach = document.getElementById("tenSach").value;
+        let namXuaBan = document.getElementById("namXuatBan").value;
+        let soQuyen = document.getElementById("soQuyen").value;
+        let kiemTraNamXuatBan = maSach.length == 5 && maSach[0] < 5 && maSach[0] > 0;
+        if (kiemTraNamXuatBan && tenSach != "" && namXuaBan.length <= 4 && soQuyen >= 0) {
+            let sachMoi = new QuanLySach(maSach, tenSach, namXuaBan, soQuyen);
+            listBook.push(sachMoi);
+            document.getElementById("maSach").value = "";
+            document.getElementById("tenSach").value = "";
+            document.getElementById("namXuatBan").value = "";
+            document.getElementById("soQuyen").value = "";
+        } else {
+            alert("các mục không được để trống và Cần nhập đúng quy định");
+        }
+        kiemTraTinhTrangSach(listBook);
+        display(listBook);
+    }
+
+    function kiemTraTinhTrangSach(danhSach) {
+        for (let i = 0; i < danhSach.length; i++) {
+            if (danhSach[i].getSoQuyen() > 0) {
+                danhSach[i].setTinhTrang(true);
+            } else {
+                danhSach[i].setTinhTrang(false);
+            }
+        }
+    }
+
+    function themSachDaCo() {
+        alert("Coming Soon!");
+    }
+
+    function muonSach() {
+        alert("Coming Soon!");
+    }
+
+    function hienThiSachNhieuNhat() {
+        alert("Coming Soon!");
+    }
+</script>
+</body>
+</html>
