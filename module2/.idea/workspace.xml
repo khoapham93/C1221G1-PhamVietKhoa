@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3ed53781-d382-4569-853b-8df99acdd763" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/META-INF/module2.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/ss1_introduction_to_java/bai_tap/chuyen_doi_tien_te/ChuyenDoiTienTe.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/ss1_introduction_to_java/bai_tap/doc_so_thanh_chu/DocSoThanhChu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/ss1_introduction_to_java/bai_tap/hien_thi_loi_chao/HienThiLoiChao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/ss1_introduction_to_java/thuc_hanh/bmi_calculator/BMICalculator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/ss1_introduction_to_java/thuc_hanh/giai_phuong_trinh_bac_nhat/GiaiPhuongTrinhBacNhat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/ss1_introduction_to_java/thuc_hanh/hien_thi_thoi_gian_he_thong/HienThiThoiGianHeThong.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/ss1_introduction_to_java/thuc_hanh/khai_bao_va_su_dung_bien/KhaiBaoVaSuDungBien.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/ss1_introduction_to_java/thuc_hanh/kiem_tra_nam_nhuan/KiemTraNamNhuan.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/ss1_introduction_to_java/thuc_hanh/su_dung_toan_tu/SuDungToanTu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module2/ss1_introduction_to_java/thuc_hanh/tinh_so_ngay_trong_thang/TinhSoNgayTrongThang.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss1_introduction_to_java/bai_tap/chuyen_doi_tien_te/ChuyenDoiTienTe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss1_introduction_to_java/bai_tap/doc_so_thanh_chu/DocSoThanhChu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss1_introduction_to_java/bai_tap/hien_thi_loi_chao/HienThiLoiChao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss1_introduction_to_java/thuc_hanh/bmi_calculator/BMICalculator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss1_introduction_to_java/thuc_hanh/giai_phuong_trinh_bac_nhat/GiaiPhuongTrinhBacNhat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss1_introduction_to_java/thuc_hanh/hien_thi_thoi_gian_he_thong/HienThiThoiGianHeThong.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss1_introduction_to_java/thuc_hanh/khai_bao_va_su_dung_bien/KhaiBaoVaSuDungBien.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss1_introduction_to_java/thuc_hanh/kiem_tra_nam_nhuan/KiemTraNamNhuan.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss1_introduction_to_java/thuc_hanh/su_dung_toan_tu/SuDungToanTu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss1_introduction_to_java/thuc_hanh/tinh_so_ngay_trong_thang/TinhSoNgayTrongThang.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="257wZv3H3Zos2ZMCrOqka2vCII0" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Module2" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\CODEGYM\Module2" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.ChuyenDoiTienTe">
+    <configuration name="BMICalculator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss1_introduction_to_java.thuc_hanh.bmi_calculator.BMICalculator" />
+      <module name="module2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ss1_introduction_to_java.thuc_hanh.bmi_calculator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ChuyenDoiTienTe" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss1_introduction_to_java.bai_tap.chuyen_doi_tien_te.ChuyenDoiTienTe" />
+      <module name="module2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ss1_introduction_to_java.bai_tap.chuyen_doi_tien_te.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DocSoThanhChu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss1_introduction_to_java.bai_tap.doc_so_thanh_chu.DocSoThanhChu" />
+      <module name="module2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ss1_introduction_to_java.bai_tap.doc_so_thanh_chu.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GiaiPhuongTrinhBacNhat" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss1_introduction_to_java.thuc_hanh.giai_phuong_trinh_bac_nhat.GiaiPhuongTrinhBacNhat" />
+      <module name="module2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ss1_introduction_to_java.thuc_hanh.giai_phuong_trinh_bac_nhat.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HienThiLoiChao" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss1_introduction_to_java.bai_tap.hien_thi_loi_chao.HienThiLoiChao" />
+      <module name="module2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ss1_introduction_to_java.bai_tap.hien_thi_loi_chao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$" />
+      <setting name="debug" value="false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ChuyenDoiTienTe" />
+        <item itemvalue="Application.DocSoThanhChu" />
+        <item itemvalue="Application.HienThiLoiChao" />
+        <item itemvalue="Application.BMICalculator" />
+        <item itemvalue="Application.GiaiPhuongTrinhBacNhat" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3ed53781-d382-4569-853b-8df99acdd763" name="Default Changelist" comment="" />
+      <created>1644891491527</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1644891491527</updated>
+      <workItem from="1644891494591" duration="41000" />
+      <workItem from="1644891558778" duration="26000" />
+      <workItem from="1644895094126" duration="195000" />
+      <workItem from="1644909504780" duration="32000" />
+      <workItem from="1644910688839" duration="1145000" />
+      <workItem from="1644911974292" duration="199000" />
+      <workItem from="1644913537874" duration="5894000" />
+      <workItem from="1644931736173" duration="4116000" />
+      <workItem from="1644984220917" duration="65000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="154" key="FileChooserDialogImpl" timestamp="1644984267877">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="154" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1644984267877" />
+    <state width="1493" height="174" key="GridCell.Tab.0.bottom" timestamp="1644935900756">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="174" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1644935900756" />
+    <state width="1493" height="174" key="GridCell.Tab.0.center" timestamp="1644935900756">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="174" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1644935900756" />
+    <state width="1493" height="174" key="GridCell.Tab.0.left" timestamp="1644935900756">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="174" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1644935900756" />
+    <state width="1493" height="174" key="GridCell.Tab.0.right" timestamp="1644935900756">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="174" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1644935900756" />
+    <state x="345" y="102" key="SettingsEditor" timestamp="1644914285774">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="345" y="102" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1644914285774" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1644916165188">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1644916165188" />
+    <state x="487" y="145" key="search.everywhere.popup" timestamp="1644909515281">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="487" y="145" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1644909515281" />
+  </component>
+</project>
